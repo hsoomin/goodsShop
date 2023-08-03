@@ -37,7 +37,7 @@ const MainPage = () => {
                             <Link className="product-link" to={`/ProductPage/${idx}`}>
                                 <div className="product-card" key={idx}>
                                     <div>
-                                        <img src={product.imageUrl} alt="1" className="product-img" />
+                                        <img src={product.imageUrl} alt="11" className="product-img" />
                                     </div>
                                     <div className="product-contents">
                                         <span className="product-name">{product.name}</span>
