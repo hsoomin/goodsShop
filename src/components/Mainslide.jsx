@@ -26,12 +26,13 @@ const Mainslide = () => {
                 "--swiper-navigation-color": "lavender",
             }}
             className="mySwiper">
-                <SwiperSlide className='mainImg'><img src="react_goodsShop/img/mainslide/slide1.jpg"  alt="이미지1"/></SwiperSlide>
-                <SwiperSlide className='mainImg'><img src="react_goodsShop/img/mainslide/slide2.jpg" alt="이미지2"/></SwiperSlide>
-                <SwiperSlide className='mainImg'><img src="react_goodsShop/img/mainslide/slide3.jpg" alt="이미지23"/></SwiperSlide>
-                <SwiperSlide className='mainImg'><img src="react_goodsShop/img/mainslide/slide3.png" alt="이미지3"/></SwiperSlide>
-                <SwiperSlide className='mainImg'><img src="react_goodsShop/img/mainslide/slide4.jpg" alt="이미지4"/></SwiperSlide>
-                <SwiperSlide className='mainImg'><img src="react_goodsShop/img/mainslide/slide5.jpg" alt="이미지5"/></SwiperSlide>
+                {/* 이미지 경로 수정하기 */}
+                <SwiperSlide className='mainImg'><img src="img/mainslide/slide1.jpg"  alt="이미지1"/></SwiperSlide>
+                <SwiperSlide className='mainImg'><img src="img/mainslide/slide2.jpg" alt="이미지2"/></SwiperSlide>
+                <SwiperSlide className='mainImg'><img src="img/mainslide/slide3.jpg" alt="이미지23"/></SwiperSlide>
+                <SwiperSlide className='mainImg'><img src="img/mainslide/slide3.png" alt="이미지3"/></SwiperSlide>
+                <SwiperSlide className='mainImg'><img src="img/mainslide/slide4.jpg" alt="이미지4"/></SwiperSlide>
+                <SwiperSlide className='mainImg'><img src="img/mainslide/slide5.jpg" alt="이미지5"/></SwiperSlide>
             </Swiper>
         </div>
     );

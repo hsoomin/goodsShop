@@ -3,7 +3,6 @@ import React, { useState, useEffect } from 'react';
 import { Link } from "react-router-dom";
 import Mainslide from './Mainslide';
 import Mdpick from './Mdpick';
-import MdpickTab from './MdpickTab'; //탭으로 바꿀까
 import Magazine from './Magazine';
 import axios from 'axios';
 
@@ -11,7 +10,8 @@ import axios from 'axios';
 const MainPage = () => {
     const [products, setProducts]= useState([]);
     useEffect(() => {
-        let url="https://becce8ba-5f81-45f7-90e2-60cde1c4d586.mock.pstmn.io/products";
+        // let url="https://becce8ba-5f81-45f7-90e2-60cde1c4d586.mock.pstmn.io/products";
+        let url="http://localhost:8080/products";
         axios.get(url)
         .then((result) =>{
             const products=result.data.products;
@@ -26,7 +26,6 @@ const MainPage = () => {
         <div>
             <Mainslide/> 
             <Mdpick/> 
-            <MdpickTab/>
             <div className="banner">
                 <p>Lorem ipsum dolor sit amet,</p>
             </div>

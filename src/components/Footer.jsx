@@ -32,7 +32,7 @@ const Footer = () => {
                     </ul>
                 </div>
                 <div className="foot-addr">
-                    <h3 className='foot-logo'><img src="https://hsoomin.github.io/react_goodsShop/img/logo2.png" alt="" /></h3>
+                    <h3 className='foot-logo'><img src="goodsShop/img/logo.png" alt="" /></h3>
                     <address>경기도 성남시 분당구 801 <br/> Bundang-gu, Seongnam-si, Gyeonggi-do, Republic of Korea</address>
                     <div className='copy'>COPYRIGHT &copy; SOOMIN ALL RIGHT RESERVED.</div>
                 </div>
