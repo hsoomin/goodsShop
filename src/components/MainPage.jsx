@@ -14,7 +14,8 @@ const MainPage = () => {
         let url="http://localhost:8080/products";
         axios.get(url)
         .then((result) =>{
-            const products=result.data.products;
+            console.log(result)
+            const products=result.data.product;
             setProducts(products)
         }).catch((error)=>{
             console.log(error)

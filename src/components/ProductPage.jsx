@@ -14,11 +14,12 @@ const ProductPage = () => {
         axios.get(`https://becce8ba-5f81-45f7-90e2-60cde1c4d586.mock.pstmn.io/products/${id}`)
         .then((result)=>{
             setProduct(result.data)
+           /*  console.log(result) */
         })
         .catch((error)=>{
             console.log(error)
         })
-    },[])
+    },[id])
 
     console.log(product)
     if(product === null){
@@ -33,13 +34,13 @@ const ProductPage = () => {
             </div>
             <div id='profile-box'>
                 <span className='product-seller'>{product.seller}</span>
-                {/* <img src="react_goodsShop/img/icons/avatar.png" alt={product.seller} /> */}<AiOutlineHeart />
+                <AiOutlineHeart />
             </div>
             <div id="contents-box">
-                <div id="name">{product.name}</div>
-                <div id="price">{product.price}</div>
-                <div id="createAt">2023.08.02</div>
-                <div id="description">{product.description}</div>
+                <div className="name">{product.name}</div>
+                <div className="price">{product.price}</div>
+                <div className="createAt">2023.08.02</div>
+                <div className="description">{product.description}</div>
             </div>
         </div>
     );
