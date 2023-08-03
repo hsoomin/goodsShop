@@ -4,7 +4,7 @@ import { RxHamburgerMenu } from "react-icons/rx";
 import React, { useEffect, useState } from 'react';
 import { useNavigate } from "react-router-dom"; //이동
 import {Link} from 'react-router-dom';
-import logo from '../img/logo.png';
+import logo from '../img/logo.png'; //src
 import Navbar from './Navbar';
 import { CSSTransition } from 'react-transition-group'; 
 import './DropdownMenu.css'

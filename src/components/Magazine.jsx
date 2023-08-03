@@ -37,12 +37,12 @@ const Magazine = () => {
                     }}
                     modules={[Autoplay]}
                     >
-                        <SwiperSlide className='mag-img'><img src="react_goodsShop/img/mag1.jpg" alt="" /></SwiperSlide>
-                        <SwiperSlide className='mag-img'><img src="react_goodsShop/img/mag2.jpg" alt="" /></SwiperSlide>
-                        <SwiperSlide className='mag-img'><img src="react_goodsShop/img/mag5.jpg" alt="" /></SwiperSlide>
-                        <SwiperSlide className='mag-img'><img src="react_goodsShop/img/mag3.jpg" alt="" /></SwiperSlide>
-                        <SwiperSlide className='mag-img'><img src="react_goodsShop/img/mag4.jpg" alt="" /></SwiperSlide>
-                        <SwiperSlide className='mag-img'><img src="react_goodsShop/img/mag6.png" alt="" /></SwiperSlide>
+                        <SwiperSlide className='mag-img'><img src={process.env.PUBLIC_URL + '/img/mag1.jpg'} alt="" /></SwiperSlide>
+                        <SwiperSlide className='mag-img'><img src={process.env.PUBLIC_URL + '/img/mag2.jpg'} alt="" /></SwiperSlide>
+                        <SwiperSlide className='mag-img'><img src={process.env.PUBLIC_URL + '/img/mag5.jpg'} alt="" /></SwiperSlide>
+                        <SwiperSlide className='mag-img'><img src={process.env.PUBLIC_URL + '/img/mag3.jpg'} alt="" /></SwiperSlide>
+                        <SwiperSlide className='mag-img'><img src={process.env.PUBLIC_URL + '/img/mag4.jpg'} alt="" /></SwiperSlide>
+                        <SwiperSlide className='mag-img'><img src={process.env.PUBLIC_URL + '/img/mag6.png'} alt="" /></SwiperSlide>
                     </Swiper>
                 </div>
             </div>
