@@ -1,0 +1,482 @@
+@import url('https://fonts.googleapis.com/css2?family=Ysabeau+SC:wght@200;300;400;500;600&display=swap');
+body{font-family: 'Ysabeau SC','REM', sans-serif; } 
+
+@import url('https://fonts.googleapis.com/css2?family=REM:wght@400;700&display=swap');
+
+// @import url('https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@300;400;700&display=swap');
+// body{font-family: 'Frank Ruhl Libre', serif;} 
+
+
+
+$tablet-max: 1023px;
+$desktop-min: 1440px;
+
+
+@mixin tablet{
+    @media (max-width: $tablet-max) {
+        @content;
+    }
+} 
+@mixin desktop{
+    @media (max-width: $desktop-min){
+        @content;
+    }
+}
+
+
+.App{
+    .header{
+        width: 100%;
+        height: 90px;
+        border-bottom: 1px solid #ccc;
+        background: rgba(255,255,255,.8);
+        .container{
+            width: 1440px; 
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 100%;
+            .logo{
+                width: 100px;}
+            .nav{
+                .listWrap{
+                    display: flex;
+                    list-style: none;
+                    li{
+                        margin: 0 20px;
+                        a{
+                            color: #222; 
+                            text-decoration: none;
+                            transition: .5s;
+                            font-size: 18px;
+                            &:hover{
+                                color:rgb(219, 15, 127);
+                                
+                            }
+                        }
+                        &:hover{
+                            animation: slide 0.5s infinite;
+                        }
+                    }
+                    @keyframes slide {
+                        0%{transform: translate(0, 0) rotate(0);}
+                        20%{transform: translate(-2px,-2px) rotate(-2deg);}
+                        40%{transform: translate(2px,2px) rotate(2deg);}
+                        60%{transform: translate(2px,2px) rotate(2deg);}
+                        80%{transform: translate(-2px,2px) rotate(-2deg);}
+                        100%{transform: translate(2px,-2px) rotate(2deg);}
+                    }
+                }
+            }
+            .mobileBar{
+                display: none;
+                .hamIcon,.closeIcon{font-size: 26px;}
+                .nav{
+                    display: block;  //우선 none 시키고 나중에 block
+                    position: absolute; 
+                    top: 75px; 
+                    left: 0;
+                    width: 100%;
+                    z-index: 150;
+                    ul{
+                        flex-direction: column;
+                        padding: 0;
+                        background: rgba(255,255,255,.8);
+                        li{
+                            border-bottom: 1px solid #ddd;
+                            padding: 10px 0;
+                            a{}
+                            
+                            
+                        }
+                    }
+                }
+            }
+            .btn{
+                background: none;
+                width:80px;
+                border:  1px solid #ccc;
+                border-radius: 5px;
+                padding: 10px 5px;
+                font-size: 20px;
+            }
+            
+        }
+    }
+    //메인 슬라이드fgd
+    .mainImg{
+        width: 100%;
+    }
+    //banner
+    .banner{
+        width: 100%;
+        height: 200px;
+        // background: mediumseagreen;
+        background: url(./img/banner.jpg);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        p{
+            color: #fff;
+            font-size: 50px;
+        }
+    }
+    //mdpick
+    .mdpick{
+        width: 1440px; 
+        margin: 0 auto;
+        padding: 100px 0;
+        h2{
+            position: relative;
+            &:after{
+                content: '';
+                height: 10px;
+                width: 50px;
+                position: absolute;
+                top: 12px;
+                left: 0;
+                background: palevioletred;
+                z-index: -1;
+            }
+        }
+        .mdList{
+            ul{
+                display: flex;
+                list-style: none;
+                padding: 0;
+                li{
+                    flex-basis: 33.333%;
+                    display: flex;
+                    flex-direction: column;
+                    position: relative;
+                    &:not(:last-child){margin-right: 20px;}
+                    .md-img{
+                        img{
+                            width: 100%;
+                            height: 100%;
+                        }
+                    }
+                    .md-name{
+                        font-size: 1.2rem;
+                    }
+                    .md-price{
+                        color: #333;
+                    }
+                    .bg{
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        width: 100%;
+                        height: 91%;
+                        background: rgba(0,0,0,.7);
+                        display: flex;
+                        align-items: center;
+                        padding: 30px;
+                        box-sizing: border-box;
+                        color: rgba(255,255,255,.8);
+                        opacity: 0;
+                        &:hover{
+                            opacity: 1;
+                            transition: .5s;
+                        }
+                    }
+                    
+                }
+            }
+        }
+    }
+    //
+    //product
+    .products{
+        width: 1440px;
+        margin: 0 auto;
+        padding: 100px 0;
+        h2{
+            position: relative;
+            z-index: 1;
+            &:after{
+                content: '';
+                height: 10px;
+                width: 90px;
+                position: absolute;
+                top: 12px;
+                left: -3px;
+                background: palevioletred;
+                z-index: -1;
+            }
+        }
+        .p-list{
+            display: flex;
+            .product-link{
+                text-decoration: none;
+                color: #333;
+                &:not(:last-child){
+                    margin-right: 20px;
+                }
+                .product-card{
+                    .product-img{width: 100%;}
+                    .product-contents{
+                        display: flex;
+                        flex-direction: column;
+                        .product-name{
+                            font-size: 20px;
+                        }
+                        .product-price{
+                            font-size: 16px;
+                        }
+                        .product-seller{
+                            display: flex;
+                            justify-content: space-between;
+                            margin-top: 10px;
+                            .product-avatar{
+                                color: slateblue;
+                                font-size: 18px;
+                            }
+                            .seller{font-size: 14px;}
+                        }
+                    }
+                }
+            }    
+        }
+    }
+    //magazine
+    .magazine{
+        width: 100%;
+        padding: 100px 0;
+        overflow: hidden;
+        box-sizing: border-box;
+        .container{
+            width: 1440px; 
+            margin: 0 auto;
+            .magazine-title{
+                h2{
+                    position: relative;
+                    z-index: 1;
+                    &:after{
+                        content: '';
+                        height: 10px;
+                        width: 90px;
+                        position: absolute;
+                        top: 12px;
+                        left: 0px;
+                        background: palevioletred;
+                        z-index: -1;
+                    }
+                }
+            }
+            .magazineList{
+                position: relative;
+                height: 608px;
+                display: flex;
+                    .magazine-box{
+                        width: 298px;
+                        height: 100%;
+                        background: #f3f3f3;
+                        padding: 20px;
+                        box-sizing: border-box;
+                        position: relative;
+                        span{
+                            position: absolute;
+                            color: #fff;
+                            font-size: 80px;
+                            font-weight: bold;
+                            font-family: 'REM';
+                            -webkit-text-stroke:1px #000;
+                            transform: rotate(90deg);
+                            
+                        }
+                        .m{
+                            top: 20px;
+                            left: 12px;
+                            color: #000;
+                        }
+                        .a1{
+                            top: 90px;
+                            color: #000;
+                        }
+                        .g{
+                            top: 160px;
+                            color: #000;
+                        }
+                        .a2{
+                            top: 235px;
+                            color: #000;
+                        }
+                        .z{
+                            top: 300px;
+                            left: 22px;
+                        }
+                        .i{
+                            top: 350px;
+                            left: 35px;
+                        }
+                        .n{
+                            top: 410px;
+                            left: 18px;
+                        }
+                        .e{
+                            top: 480px;
+                            left: 22px;
+                        }
+                    }
+                    .swiper-wrap{
+                        width:100%;
+                        
+                        position: absolute;
+                        left:320px; 
+                        display: flex;
+                        .mag-img{
+                            height: 100%;
+                            img{
+                            width:100%;
+                            height: 608px;
+                            }
+                            
+                        }
+                        
+                    }
+                }
+                
+        }
+    }
+    //footer
+    .foot-bg{
+        width: 100%;
+        // height: 300px;
+        background: rgba(190, 183, 214, 0.651);
+        // background-image: linear-gradient(rgba(0,0,0,.6),rgba(0,0,0,.3) );
+        .container{
+            width: 1440PX;
+            margin: 0 auto;
+            padding: 30px 50px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-sizing: border-box;
+            .foot-memu{
+                margin: 0;
+                >ul{
+                    margin: 0;
+                    display: flex;
+                    list-style: none;
+                    padding: 0;
+                    width: 500px;
+                    >li{
+                        // flex-basis: 33.333%;
+                        width: 150px;
+                        &:not(:first-child){margin-right: 20px;}
+                        >a{
+                            font-size: 18px;
+                            color: #333;
+                            font-weight: bold;
+                            text-decoration: none;
+                            display: block;
+                            margin-bottom: 20px;
+                        }
+                        ul{
+                            padding: 0;
+                            list-style: none;
+                            li{
+                                a{
+                                    font-size: 16px;
+                                    color: #333;
+                                    text-decoration: none;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .foot-addr{
+                .foot-logo{
+                    margin-bottom: 20px;
+                    text-align: center;
+                    img{width: 200px;}
+                }
+                address{
+                    color: #333; 
+                    font-style: normal;}
+                .copy{color: #333;}
+            }
+        }
+    }
+
+
+    @include desktop{
+        .header{
+            width: 100%;
+            height: 90px;
+            border-bottom: 1px solid #ccc;
+            background: rgba(255,255,255,.8);
+            .container{
+                width: 100%;
+                padding: 0 2rem;
+                box-sizing: border-box;
+            }
+        }
+        .mdpick{
+            width: 100%;
+            padding: 80px 20px;
+            box-sizing: border-box;
+        }
+        .magazine{
+            padding: 80px 20px;
+        }
+        .products{
+            width: 100%;
+            padding: 80px 20px;
+            box-sizing: border-box;
+        }
+        .foot-bg{
+            width: 100%;
+            padding: 50px 20px;
+            box-sizing: border-box;
+            .container{
+                width:100%;
+            }
+        }
+    }
+
+    @include tablet{
+        .header{
+            .container{
+                width: 100%;
+                padding: 0 2rem;
+                box-sizing: border-box;
+                h1{order: 2;}
+                .logo{}
+                .nav{display: none;}
+                .mobileBar{display: block; order: 1;}
+                .btn{
+                    background: none;
+                    width:80px;
+                    border-radius: 5px;
+                    padding: 10px 5px;
+                    order: 3;
+                }
+            }
+        }
+        .mdpick{
+            width: 100%;
+            padding: 80px 20px;
+            box-sizing: border-box;
+        }
+        .banner{
+            p{
+                font-size: 200%;
+                transition: .5s;
+            }
+        }
+        .products{
+            padding: 30px 20px;
+        }
+        .foot-bg{
+            padding: 0 20px;
+            box-sizing: border-box;
+            .container{
+                width:100%;
+            }
+        }
+    } 
+}
