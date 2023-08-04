@@ -4,7 +4,7 @@ import { NavLink } from 'react-router-dom';
 const Navbar = () => {
     //active
     const activeStyle={
-        color:'slateblue'
+        color:'purple'
     }
     return (
         <nav className='nav'>

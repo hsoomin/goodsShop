@@ -3,7 +3,8 @@ import React,{useEffect,useState} from 'react';
 import { useParams,  useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import "./ProductPage.scss";
-
+import { API_URL} from "../config/constants";
+import dayjs from "dayjs";
 
 const ProductPage = () => {
     const {id}=useParams();
@@ -11,9 +12,9 @@ const ProductPage = () => {
     const [product,setProduct]=useState(null);
 
     useEffect(()=>{
-        axios.get(`https://becce8ba-5f81-45f7-90e2-60cde1c4d586.mock.pstmn.io/products/${id}`)
+        axios.get(`${API_URL}/products/${id}`)
         .then((result)=>{
-            setProduct(result.data)
+            setProduct(result.data.product)
            /*  console.log(result) */
         })
         .catch((error)=>{
@@ -30,17 +31,15 @@ const ProductPage = () => {
         <div>
             <button onClick={() => navigate(-1)} id='back-btn'>이전화면</button>
             <div id="image-box">
-                <img src={`/${product.imageUrl}`} alt={product.name} />
-            </div>
-            <div id='profile-box'>
-                <span className='product-seller'>{product.seller}</span>
-                <AiOutlineHeart />
+                <img src={`${API_URL}/${product.imageUrl}`} alt={product.name} />
             </div>
             <div id="contents-box">
-                <div className="name">{product.name}</div>
-                <div className="price">{product.price}</div>
-                <div className="createAt">2023.08.02</div>
-                <div className="description">{product.description}</div>
+                <AiOutlineHeart  className="product-icon"/>
+                <span className='product-seller'>{product.seller}</span>
+                <div className="product-name">{product.name}</div>
+                <div className="product-price">{product.price}</div>
+                <div className="product-createAt">{dayjs(product.createdAt).format('YYYY년 MM월 DD일')}</div>
+                <div className="product-description">{product.description}</div>
             </div>
         </div>
     );
