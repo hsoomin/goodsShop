@@ -38,14 +38,15 @@ const MainPage = () => {
             </div>
             <div className="products">
                 <h2>products</h2>
-                <button className="register-btn" onClick={()=>{navigate('/UploadPage')}}><p>상품 등록하기</p><AiOutlineArrowRight /></button>
+                <button className="register-btn" onClick={()=>{navigate('/UploadPage')}}><span>상품 등록하기 <AiOutlineArrowRight /></span></button>
                 <div id="product-list" className="p-list">
                     {products.map((product) => {
                         return (
-                            <Link className="product-link" to={`/ProductPage/${product.id}`}  key={product.id}>
-                                <div className="product-card">
+                            <div className="product-card">
+                                {product.soldout === 1 ? <div className="product-blur"><p>sold out</p></div> : null}
+                                <Link className="product-link" to={`/ProductPage/${product.id}`}  key={product.id}>
                                     <div>
-                                        <img src={`${API_URL}/${product.imageUrl}`} alt="11" className="product-img" />
+                                        <img src={`${API_URL}/${product.imageUrl}`} alt="product-img" className="product-img" />
                                     </div>
                                     <div className="product-contents">
                                         <span className="product-name">{product.name}</span>
@@ -55,8 +56,8 @@ const MainPage = () => {
                                             <AiOutlineHeart className="product-avatar" />
                                         </div>
                                     </div>
-                                </div>
-                            </Link>
+                                </Link>
+                            </div>
                         )
                     }) }
                 </div>

@@ -2,6 +2,7 @@ import { AiOutlineHeart } from "react-icons/ai";
 import React,{useEffect,useState} from 'react';
 import { useParams,  useNavigate } from 'react-router-dom';
 import axios from 'axios';
+import { Button, message } from 'antd';
 import "./ProductPage.scss";
 import { API_URL} from "../config/constants";
 import dayjs from "dayjs";
@@ -10,8 +11,7 @@ const ProductPage = () => {
     const {id}=useParams();
     const navigate=useNavigate();
     const [product,setProduct]=useState(null);
-
-    useEffect(()=>{
+    const getProduct=()=>{
         axios.get(`${API_URL}/products/${id}`)
         .then((result)=>{
             setProduct(result.data.product)
@@ -20,7 +20,23 @@ const ProductPage = () => {
         .catch((error)=>{
             console.log(error)
         })
-    },[id])
+    }
+
+    useEffect(()=>{
+        getProduct();
+    },[])
+
+
+    const onClickPurchase=()=>{
+        axios.post(`${API_URL}/purchase/${id}`)
+        .then((result)=>{
+            message.info(`결제가 완료되었습니다`)
+            getProduct();
+        })
+        .catch((error)=>{
+            message.error(`에러가 발생했습니다 ${error.message}`)
+        })
+    }
 
     console.log(product)
     if(product === null){
@@ -28,7 +44,7 @@ const ProductPage = () => {
     }
 
     return (
-        <div>
+        <div className="product-container">
             <button onClick={() => navigate(-1)} id='back-btn'>이전화면</button>
             <div id="image-box">
                 <img src={`${API_URL}/${product.imageUrl}`} alt={product.name} />
@@ -40,6 +56,7 @@ const ProductPage = () => {
                 <div className="product-price">{product.price}</div>
                 <div className="product-createAt">{dayjs(product.createdAt).format('YYYY년 MM월 DD일')}</div>
                 <div className="product-description">{product.description}</div>
+                <Button className="payment" onClick={onClickPurchase} disabled={product.soldout === 1 ? true:false}>결제하기</Button>
             </div>
         </div>
     );
