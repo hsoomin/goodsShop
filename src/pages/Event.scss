@@ -6,6 +6,35 @@
         width: 1440PX;
         margin: 0 auto;
         h2{text-align: center;}
+        .event-tab{
+            .tab-menu{
+                    display: flex;
+                    width: 100%;
+                    border-bottom: 1px solid #aaa;
+                    list-style: none;
+                li{
+                    display: block;
+                    padding: 5px 0;
+                    position: relative;
+                    width: 210px;
+                    font-size: 15px;
+                    text-align: center;
+
+                    height: 34px; 
+                    line-height: 34px;
+                    background: #f2f2f2;
+                    color: #a2a0a3;
+                    &.active{
+                        border: 1px solid #aaa;
+                        border-bottom: 1px solid #fff;
+                        box-shadow: 0 1px 0 #fff;
+                        background: #fff;
+                        color: #333;
+                        
+                    }
+                }
+            }
+        }
         .event-list{
             width: 1440px;
             overflow: hidden;
