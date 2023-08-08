@@ -1,8 +1,8 @@
 import './App.scss';
+import { Routes, Route } from 'react-router-dom';
 import MainPage from './components/MainPage';
 import Header from './components/Header';
 import Footer from './components/Footer';
-import { Routes, Route } from 'react-router-dom';
 import Interior from './pages/Interior';
 import Kitchen from './pages/Kitchen';
 import Fabric from './pages/Fabric';
@@ -18,7 +18,7 @@ function App() {
     <div className="App">
       <Header/> 
       <Routes>
-        <Route path='/*' element={<MainPage/>}/>
+        <Route path='/' element={<MainPage/>}/>
         <Route path='/interior' element={<Interior/>}/>
         <Route path='/kitchen' element={<Kitchen/>}/>
         <Route path='/fabric' element={<Fabric/>}/>

@@ -27,12 +27,11 @@ const Mainslide = () => {
             }}
             className="mySwiper">
                 {/* 이미지 경로 수정하기 */}
-                <SwiperSlide className='mainImg'><img src={process.env.PUBLIC_URL + '/img/mainslide/slide1.jpg'}  alt="이미지1"/></SwiperSlide>
-                <SwiperSlide className='mainImg'><img src={process.env.PUBLIC_URL + '/img/mainslide/slide2.jpg'}  alt="이미지2"/></SwiperSlide>
-                <SwiperSlide className='mainImg'><img src={process.env.PUBLIC_URL + '/img/mainslide/slide3.jpg'}  alt="이미지23"/></SwiperSlide>
-                <SwiperSlide className='mainImg'><img src={process.env.PUBLIC_URL + '/img/mainslide/slide3.png'}  alt="이미지3"/></SwiperSlide>
-                <SwiperSlide className='mainImg'><img src={process.env.PUBLIC_URL + '/img/mainslide/slide4.jpg'}  alt="이미지4"/></SwiperSlide>
-                <SwiperSlide className='mainImg'><img src={process.env.PUBLIC_URL + '/img/mainslide/slide5.jpg'}  alt="이미지5"/></SwiperSlide>
+                <SwiperSlide className='mainImg'><img src={process.env.PUBLIC_URL + '/img/mainslide/slide_01.jpg'}  alt="이미지1"/></SwiperSlide>
+                <SwiperSlide className='mainImg'><img src={process.env.PUBLIC_URL + '/img/mainslide/slide_02.jpg'}  alt="이미지2"/></SwiperSlide>
+                <SwiperSlide className='mainImg'><img src={process.env.PUBLIC_URL + '/img/mainslide/slide_03.jpg'}  alt="이미지3"/></SwiperSlide>
+                <SwiperSlide className='mainImg'><img src={process.env.PUBLIC_URL + '/img/mainslide/slide_04.jpg'}  alt="이미지4"/></SwiperSlide>
+                <SwiperSlide className='mainImg'><img src={process.env.PUBLIC_URL + '/img/mainslide/slide_05.jpg'}  alt="이미지5"/></SwiperSlide>
             </Swiper>
         </div>
     );
