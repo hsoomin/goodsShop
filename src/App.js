@@ -9,6 +9,7 @@ import Fabric from './pages/Fabric';
 import Event from './pages/Event';
 import UploadPage from './components/UploadPage';
 import ProductPage from './components/ProductPage';
+import VerticalScrollBar from './components/VerticalScrollBar';
 
 
 
@@ -16,6 +17,7 @@ import ProductPage from './components/ProductPage';
 function App() {
   return (
     <div className="App">
+      <VerticalScrollBar></VerticalScrollBar>
       <Header/> 
       <Routes>
         <Route path='/' element={<MainPage/>}/>

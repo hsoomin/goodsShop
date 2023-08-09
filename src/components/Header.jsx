@@ -39,7 +39,7 @@ const Header = () => {
                     unmountOnExit
                     ><Navbar /></CSSTransition>
                 </div>
-                <button className="btn" onClick={()=>{navigate('/UploadPage')}}><AiOutlineCloudUpload /></button>
+                {/* <button className="btn" onClick={()=>{navigate('/UploadPage')}}><AiOutlineCloudUpload /></button> */}
             </div>
         </header>
     );
