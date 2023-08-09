@@ -95,6 +95,13 @@ const Event = () => {
             date: '2023.07.25 ~',
             status:'진행중인 이벤트',
         },
+        {
+            id: 14,
+            imageUrl: 'img/event/ev14.jpg',
+            title: '공간을 바꾸는 커튼',
+            date: '2023.07.25 ~',
+            status:'진행중인 이벤트',
+        },
     ];
 
     const [selectedTab, setSelectedTab] = useState('진행중인 이벤트');

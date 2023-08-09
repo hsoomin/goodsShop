@@ -5,7 +5,7 @@ body{font-family: 'Ysabeau SC','REM', sans-serif; }
 
 //한글 폰트
 
-
+::-webkit-scrollbar{width: 0px;}  
 $tablet-max: 1023px;
 $desktop-min: 1440px;
 
@@ -37,9 +37,21 @@ $desktop-min: 1440px;
             .logo{
                 width: 100px;}
             .nav{
+                .register{
+                    display: flex;
+                    list-style: none;
+                    padding: 0;
+                    li{
+                        a{
+                            color: #222; 
+                            text-decoration: none;
+                        }
+                    }
+                }
                 .listWrap{
                     display: flex;
                     list-style: none;
+                    padding: 0;
                     li{
                         margin: 0 20px;
                         a{
