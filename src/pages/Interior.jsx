@@ -192,7 +192,8 @@ const Interior = () => {
                         <h3>인테리어</h3>
                         <p>인테리어 모두보기</p>
                     </div>
-                    <div className="sticky-container">
+                    <div 
+                    className="sticky-container">
                         <img src={process.env.PUBLIC_URL + '/img/sticky01.jpg'} alt="" className="sticky-img" />
                     </div>
                 </div>
@@ -307,7 +308,7 @@ const Interior = () => {
                             </button>
                         </div>
                     </div>
-                </div> */}
+                </div>  */}
                 <div className='interior-right'>
                     <div className="interior-right-inner">
                         {interiorProducts.slice(0, visibleCount).map(product => (

@@ -6,6 +6,7 @@
     min-height: 100vh;
     margin: 0 auto;
     overflow: hidden;
+    padding-bottom: 200px;
     h2{}
     .interior-container{
         width: 100%;
@@ -24,8 +25,8 @@
                 p{}
             }
             .sticky-container{
-                height: calc(100vh - 120px);
                 width: 33%;
+                height: calc(100vh - 120px);
                 position: fixed;
                 top: 90px;
                 .sticky-img{
