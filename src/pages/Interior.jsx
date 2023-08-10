@@ -282,4 +282,3 @@ const Interior = () => {
 };
 
 export default Interior;    
-

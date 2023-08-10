@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import "./Event.scss";
 
 
-
+//
 const Event = () => {
     const eventData = [
         {

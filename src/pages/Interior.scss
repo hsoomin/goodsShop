@@ -64,8 +64,6 @@
                     z-index: -1;
                     transition: opacity 0.5s, z-index 0.1s;
                     opacity: 0;
-                    h3{}
-                    p{}
                 }
             }
         }
@@ -96,8 +94,6 @@
                         justify-content: space-between;
                         flex-direction: column;
                         gap: 1rem;
-                        .info-title{}
-                        .info-price{}
                     }
                     .interior-cart{
                         width: 100%;
