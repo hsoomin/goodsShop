@@ -1,4 +1,6 @@
-import { AiOutlineCloudUpload } from "react-icons/ai"; 
+import { RiAccountCircleLine } from "react-icons/ri"; 
+import { AiFillHeart } from "react-icons/ai"; 
+// import { AiOutlineCloudUpload } from "react-icons/ai"; 
 import { CgClose } from "react-icons/cg"; 
 import { RxHamburgerMenu } from "react-icons/rx"; 
 import React, { useEffect, useState } from 'react';
@@ -29,7 +31,7 @@ const Header = () => {
         <header className="header">
             <div className="container">
                 <h1><Link to="/"><img  src={logo} alt="logo"  className="logo" /></Link></h1>
-                <Navbar />
+                {/* <Navbar /> */}
                 <div className="mobileBar">
                     {icon ? ( <RxHamburgerMenu className="hamIcon" onClick={toggleMenu}/>) :(<CgClose className="closeIcon" onClick={toggleMenu}/>)}
                     <CSSTransition

@@ -24,9 +24,10 @@ $desktop-min: 1440px;
 .App{
     .header{
         width: 100%;
-        height: 90px;
-        border-bottom: 1px solid #ccc;
-        background: rgba(255,255,255,.8);
+        height: 72px;  //높이 수정중
+        // border-bottom: 1px solid #ccc;
+        // background: rgba(255,255,255,.8);
+        background: transparent;
         .container{
             width: 1440px; 
             margin: 0 auto;
@@ -79,12 +80,12 @@ $desktop-min: 1440px;
                 }
             }
             .mobileBar{
-                display: none;
+                display: block;
                 .hamIcon,.closeIcon{font-size: 26px;}
                 .nav{
                     display: block;  //우선 none 시키고 나중에 block
                     position: absolute; 
-                    top: 75px; 
+                    top: 57px; 
                     left: 0;
                     width: 100%;
                     z-index: 150;
@@ -93,7 +94,6 @@ $desktop-min: 1440px;
                         padding: 0;
                         background: rgba(255,255,255,.8);
                         li{
-                            border-bottom: 1px solid #ddd;
                             padding: 10px 0;
                             a{}
                             
@@ -102,14 +102,32 @@ $desktop-min: 1440px;
                     }
                 }
             }
-            .btn{
-                background: none;
-                width:80px;
-                border:  1px solid #ccc;
-                border-radius: 5px;
-                padding: 10px 5px;
-                font-size: 20px;
+            .header-icon{
+                list-style: none;
+                display: flex;
+                padding: 0;
+                .header-like{
+                    margin-right: 5px;
+                    a{
+                        color: #333;
+                        font-size: 30px;
+                    }
+                }
+                .header-signUp{
+                    a{
+                        color: #333;
+                        font-size: 30px;
+                    }
+                }
             }
+            // .btn{
+            //     background: none;
+            //     width:80px;
+            //     border:  1px solid #ccc;
+            //     border-radius: 5px;
+            //     padding: 10px 5px;
+            //     font-size: 20px;
+            // }
             
         }
     }
@@ -458,8 +476,8 @@ $desktop-min: 1440px;
     @include desktop{
         .header{
             width: 100%;
-            height: 90px;
-            border-bottom: 1px solid #ccc;
+            height: 72px;
+            // border-bottom: 1px solid #ccc;
             background: rgba(255,255,255,.8);
             .container{
                 width: 100%;
@@ -496,16 +514,19 @@ $desktop-min: 1440px;
                 width: 100%;
                 padding: 0 2rem;
                 box-sizing: border-box;
-                h1{order: 2;}
+                h1{order: 1;}
                 .logo{}
                 .nav{display: none;}
-                .mobileBar{display: block; order: 1;}
-                .btn{
-                    background: none;
-                    width:80px;
-                    border-radius: 5px;
-                    padding: 10px 5px;
-                    order: 3;
+                .mobileBar{display: block; order: 2;}
+                // .btn{
+                //     background: none;
+                //     width:80px;
+                //     border-radius: 5px;
+                //     padding: 10px 5px;
+                //     order: 3;
+                // }
+                .header-icon{
+                    display: none;
                 }
             }
         }

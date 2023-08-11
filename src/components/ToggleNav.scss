@@ -1,0 +1,37 @@
+header{
+    width: 100%;
+    position: fixed;
+    top:0;
+    left:0;
+    z-index: 99;
+    background: transparent ;
+    color: #fff;
+    .container{
+        width: 100%;
+        max-width: 1440px;
+        margin: 0 auto;
+        padding: 0 2rem;
+        box-sizing: border-box;
+        h1{
+            a{
+                img{}
+            }
+        }
+        .menuBar{
+            display: flex;
+            width: 27px;
+            height: 15px;
+            top: 26px;
+            right: 20px;
+            .menu-icon{
+                color: black;
+                font-size: 26px;}
+            .close-menu{
+                color: black;
+                font-size: 26px;}
+        }
+    }
+}
+
+
+

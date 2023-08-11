@@ -1,7 +1,7 @@
 import './App.scss';
 import { Routes, Route } from 'react-router-dom';
 import MainPage from './components/MainPage';
-import Header from './components/Header';
+// import Header from './components/Header';  -> togglenav 수정중
 import Footer from './components/Footer';
 import Interior from './pages/Interior';
 import Kitchen from './pages/Kitchen';
@@ -10,6 +10,7 @@ import Event from './pages/Event';
 import UploadPage from './components/UploadPage';
 import ProductPage from './components/ProductPage';
 import VerticalScrollBar from './components/VerticalScrollBar';
+import ToggleNav from './components/ToggleNav';
 
 
 
@@ -17,8 +18,9 @@ import VerticalScrollBar from './components/VerticalScrollBar';
 function App() {
   return (
     <div className="App">
-      <VerticalScrollBar></VerticalScrollBar>
-      <Header/> 
+      <VerticalScrollBar />
+      <ToggleNav/>
+      {/* <Header/>  */}
       <Routes>
         <Route path='/' element={<MainPage/>}/>
         <Route path='/interior' element={<Interior/>}/>

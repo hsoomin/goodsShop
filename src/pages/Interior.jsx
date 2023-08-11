@@ -116,8 +116,8 @@ const Interior = () => {
         {
             id: 19,
             imageUrl: 'img/interior/in19.jpg',
-            title: '티슈',
-            price: '24000',
+            title: "[Samuel Smalls] [주문제작] Super Tube Mirror - Large(6color)",
+            price: "820000",
         },
         {
             id: 20,
@@ -140,8 +140,8 @@ const Interior = () => {
         {
             id: 23,
             imageUrl: 'img/interior/in23.jpg',
-            title: '티슈',
-            price: '24000',
+            title: "글라스 빈티지 캔들 홀더 2type / 인테리어 오브제 촛대",
+            price: "16900",
         },
         {
             id: 24,
@@ -152,8 +152,8 @@ const Interior = () => {
         {
             id: 25,
             imageUrl: 'img/interior/in25.jpg',
-            title: '티슈',
-            price: '24000',
+            title: "세토 8칸 서랍장",
+            price: "783000",
         },
     ];
 
@@ -266,12 +266,14 @@ const Interior = () => {
                                 <span className="info-title">{product.title}</span>
                                 <span className="info-price">{product.price}</span>
                             </div>
-                            <button className='interior-cart' onClick={() => toggleLike(product.id)}>
-                                CART 
-                                <span className={likedProducts.includes(product.id) ? "like-icon" : "heart-icon"}>
-                                    {likedProducts.includes(product.id) ? <AiTwotoneHeart /> : <AiOutlineHeart />}
-                                </span>
-                            </button>
+                            <div className="interior-btn">
+                                <button className='interior-cart' onClick={() => toggleLike(product.id)}>
+                                    CART 
+                                    <span className={likedProducts.includes(product.id) ? "like-icon" : "heart-icon"}>
+                                        {likedProducts.includes(product.id) ? <AiTwotoneHeart /> : <AiOutlineHeart />}
+                                    </span>
+                                </button>
+                            </div>
                         </div>
                         ))}
                     </div>

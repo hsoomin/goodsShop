@@ -82,6 +82,7 @@
                     width: 31%;
                     display: flex;
                     flex-direction: column;
+                    justify-content: space-between;
                     gap: 1rem;
                     .interior-img{
                         width: 100%;
@@ -94,36 +95,40 @@
                         justify-content: space-between;
                         flex-direction: column;
                         gap: 1rem;
+                        flex-basis: 20%;
                     }
-                    .interior-cart{
-                        width: 100%;
-                        border: none;
-                        background: #e7e6e4;
-                        color: #555;
-                        padding: 10px 30px;
-                        font-size: 17px;
-                        margin-top: 20px;
-                        position: relative;
-                        .heart-icon {
+                    .interior-btn{
+                        display: flex;
+                        .interior-cart{
+                            width: 100%;
+                            border: none;
+                            background: #e7e6e4;
+                            color: #555;
+                            padding: 10px 30px;
                             font-size: 17px;
-                            float: right;
-                            color: tomato;
-                            cursor: pointer;
-                            position: absolute;
-                            top: 50%;
-                            right: 10px;
-                            transform: translate(0, -50%);
-                        }
-                        .like-icon {
-                            font-size: 17px;
-                            float: right;
-                            color: tomato; 
-                            cursor: pointer;
-                            position: absolute;
-                            top: 50%;
-                            right: 10px;
-                            transform: translate(0, -50%) scale(1.2);
-                            transition: .3s;
+                            margin-top: 20px;
+                            position: relative;
+                            .heart-icon {
+                                font-size: 17px;
+                                float: right;
+                                color: tomato;
+                                cursor: pointer;
+                                position: absolute;
+                                top: 50%;
+                                right: 10px;
+                                transform: translate(0, -50%);
+                            }
+                            .like-icon {
+                                font-size: 17px;
+                                float: right;
+                                color: tomato; 
+                                cursor: pointer;
+                                position: absolute;
+                                top: 50%;
+                                right: 10px;
+                                transform: translate(0, -50%) scale(1.2);
+                                transition: .3s;
+                            }
                         }
                     }
                 }
