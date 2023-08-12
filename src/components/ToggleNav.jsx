@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import {Link, NavLink} from 'react-router-dom';
 import './ToggleNav.scss'
 import logo from '../img/logo.png';
@@ -9,15 +9,32 @@ import $ from 'jquery'; // npm install jquery
 
 const ToggleNav = () => {
 
-    //아이콘 변경 토글
+    //메뉴 오픈 토글
     const [menuOpen, setMenuOpen] = useState(true);
     const toggleMenu = () => {
         setMenuOpen(prevMenuOpen => !prevMenuOpen);
         $('.header-drop').slideToggle(500);
     };
+
+    //스크롤 배경 색깔 변경
+    const [scrolled, setScrolled] = useState(false);
+    useEffect(() => {
+        const handleScroll = () => {
+            if (window.scrollY > 0) {
+                setScrolled(true);
+            } else {
+                setScrolled(false);
+            }
+        };
+
+        window.addEventListener('scroll', handleScroll);
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+        };
+    }, []);
     
     return (
-        <header className="header">
+        <header className={`header ${scrolled ? 'scrolled' : ''}`}>
             <div className="container">
                 <h1><Link to="/"><img  src={logo} alt="logo" className="logo" /></Link></h1>
                 <div className="menuBar">

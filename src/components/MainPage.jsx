@@ -8,6 +8,7 @@ import Magazine from './Magazine';
 import axios from 'axios';
 import {API_URL} from '../config/constants';
 import { useNavigate } from "react-router-dom"; //이동
+import Banner from "./Banner";
 
 const MainPage = () => {
     const [products, setProducts]= useState([]);
@@ -33,9 +34,7 @@ const MainPage = () => {
         <div>
             <Mainslide/> 
             <Mdpick/> 
-            <div className="banner">
-                <p>Lorem ipsum dolor sit amet,</p>
-            </div>
+            <Banner/>
             <div className="products">
                 <h2>products</h2>
                 <button className="register-btn" onClick={()=>{navigate('/UploadPage')}}><span>상품 등록하기 <AiOutlineArrowRight /></span></button>

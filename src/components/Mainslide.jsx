@@ -3,36 +3,37 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
-import { Autoplay, Pagination, Navigation } from 'swiper/modules';
+import { Autoplay, Navigation } from 'swiper/modules';
+
 
 const Mainslide = () => {
     return (
         <div>
             <Swiper
-            spaceBetween={30}
+            spaceBetween={10}
             centeredSlides={true}
             loop={true}
             autoplay={{
-            delay: 2500,
+            delay: 4000,
             disableOnInteraction: false,
             }}
-            pagination={{
-            clickable: true,
-            }}
             navigation={true}
-            modules={[Autoplay, Pagination, Navigation]}
+            modules={[Autoplay, Navigation]}
             style={{
-                "--swiper-pagination-color": "lavender",
                 "--swiper-navigation-color": "lavender",
             }}
             className="mySwiper">
                 {/* 이미지 경로 수정하기 */}
-                <SwiperSlide className='mainImg'><img src={process.env.PUBLIC_URL + '/img/mainslide/slide_01.jpg'}  alt="이미지1"/></SwiperSlide>
-                <SwiperSlide className='mainImg'><img src={process.env.PUBLIC_URL + '/img/mainslide/slide_02.jpg'}  alt="이미지2"/></SwiperSlide>
-                <SwiperSlide className='mainImg'><img src={process.env.PUBLIC_URL + '/img/mainslide/slide_03.jpg'}  alt="이미지3"/></SwiperSlide>
-                <SwiperSlide className='mainImg'><img src={process.env.PUBLIC_URL + '/img/mainslide/slide_04.jpg'}  alt="이미지4"/></SwiperSlide>
-                <SwiperSlide className='mainImg'><img src={process.env.PUBLIC_URL + '/img/mainslide/slide_05.jpg'}  alt="이미지5"/></SwiperSlide>
+                <SwiperSlide className='mainImg'><img src={process.env.PUBLIC_URL + '/img/mainslide/slide_101.jpg'}  alt="이미지2"/></SwiperSlide>
+                <SwiperSlide className='mainImg'><img src={process.env.PUBLIC_URL + '/img/mainslide/slide_104.png'}  alt="이미지5"/></SwiperSlide>
+                <SwiperSlide className='mainImg'><img src={process.env.PUBLIC_URL + '/img/mainslide/slide_103.jpg'}  alt="이미지4"/></SwiperSlide>
+                <SwiperSlide className='mainImg'><img src={process.env.PUBLIC_URL + '/img/mainslide/slide_100.jpg'}  alt="이미지1"/></SwiperSlide>
+                <SwiperSlide className='mainImg'><img src={process.env.PUBLIC_URL + '/img/mainslide/slide_102.jpg'}  alt="이미지3"/></SwiperSlide>
+                <SwiperSlide className='mainImg'><img src={process.env.PUBLIC_URL + '/img/mainslide/slide_105.png'}  alt="이미지3"/></SwiperSlide>
+                <SwiperSlide className='mainImg'><img src={process.env.PUBLIC_URL + '/img/mainslide/slide_105.jpg'}  alt="이미지3"/></SwiperSlide>
+
             </Swiper>
+            <div className="scroll_down"></div>
         </div>
     );
 };

@@ -5,10 +5,13 @@ body{font-family: 'Ysabeau SC','REM', sans-serif; }
 
 //한글 폰트
 
+
+//스크롤바
 ::-webkit-scrollbar{width: 0px;}  
+
+//반응형 사이즈
 $tablet-max: 1023px;
 $desktop-min: 1440px;
-
 
 @mixin tablet{
     @media (max-width: $tablet-max) {
@@ -21,136 +24,183 @@ $desktop-min: 1440px;
     }
 }
 
+body{margin: 0;padding: 0;}
 .App{
-    .header{
-        width: 100%;
-        height: 72px;  //높이 수정중
-        // border-bottom: 1px solid #ccc;
-        // background: rgba(255,255,255,.8);
-        background: transparent;
-        .container{
-            width: 1440px; 
-            margin: 0 auto;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            height: 100%;
-            .logo{
-                width: 100px;}
-            .nav{
-                .register{
-                    display: flex;
-                    list-style: none;
-                    padding: 0;
-                    li{
-                        a{
-                            color: #222; 
-                            text-decoration: none;
-                        }
-                    }
-                }
-                .listWrap{
-                    display: flex;
-                    list-style: none;
-                    padding: 0;
-                    li{
-                        margin: 0 20px;
-                        a{
-                            color: #222; 
-                            text-decoration: none;
-                            transition: .5s;
-                            font-size: 18px;
-                            &:hover{
-                                color: cornflowerblue;
+    // .header{
+    //     width: 100%;
+    //     height: 72px;  //높이 수정중
+    //     // border-bottom: 1px solid #ccc;
+    //     // background: rgba(255,255,255,.8);
+    //     // background: transparent;
+    //     .container{
+    //         width: 1440px; 
+    //         margin: 0 auto;
+    //         display: flex;
+    //         align-items: center;
+    //         justify-content: space-between;
+    //         height: 100%;
+    //         .logo{
+    //             width: 100px;}
+    //         .nav{
+    //             .register{
+    //                 display: flex;
+    //                 list-style: none;
+    //                 padding: 0;
+    //                 li{
+    //                     a{
+    //                         color: #222; 
+    //                         text-decoration: none;
+    //                     }
+    //                 }
+    //             }
+    //             .listWrap{
+    //                 display: flex;
+    //                 list-style: none;
+    //                 padding: 0;
+    //                 li{
+    //                     margin: 0 20px;
+    //                     a{
+    //                         color: #222; 
+    //                         text-decoration: none;
+    //                         transition: .5s;
+    //                         font-size: 18px;
+    //                         &:hover{
+    //                             color: cornflowerblue;
                                 
-                            }
-                        }
-                        &:hover{
-                            animation: slide 0.5s infinite;
-                        }
-                    }
-                    @keyframes slide {
-                        0%{transform: translate(0, 0) rotate(0);}
-                        20%{transform: translate(-2px,-2px) rotate(-2deg);}
-                        40%{transform: translate(2px,2px) rotate(2deg);}
-                        60%{transform: translate(2px,2px) rotate(2deg);}
-                        80%{transform: translate(-2px,2px) rotate(-2deg);}
-                        100%{transform: translate(2px,-2px) rotate(2deg);}
-                    }
-                }
-            }
-            .mobileBar{
-                display: block;
-                .hamIcon,.closeIcon{font-size: 26px;}
-                .nav{
-                    display: block;  //우선 none 시키고 나중에 block
-                    position: absolute; 
-                    top: 57px; 
-                    left: 0;
-                    width: 100%;
-                    z-index: 150;
-                    ul{
-                        flex-direction: column;
-                        padding: 0;
-                        background: rgba(255,255,255,.8);
-                        li{
-                            padding: 10px 0;
-                            a{}
+    //                         }
+    //                     }
+    //                     &:hover{
+    //                         animation: slide 0.5s infinite;
+    //                     }
+    //                 }
+    //                 @keyframes slide {
+    //                     0%{transform: translate(0, 0) rotate(0);}
+    //                     20%{transform: translate(-2px,-2px) rotate(-2deg);}
+    //                     40%{transform: translate(2px,2px) rotate(2deg);}
+    //                     60%{transform: translate(2px,2px) rotate(2deg);}
+    //                     80%{transform: translate(-2px,2px) rotate(-2deg);}
+    //                     100%{transform: translate(2px,-2px) rotate(2deg);}
+    //                 }
+    //             }
+    //         }
+    //         .mobileBar{
+    //             display: block;
+    //             .hamIcon,.closeIcon{font-size: 26px;}
+    //             .nav{
+    //                 display: block;  //우선 none 시키고 나중에 block
+    //                 position: absolute; 
+    //                 top: 57px; 
+    //                 left: 0;
+    //                 width: 100%;
+    //                 z-index: 150;
+    //                 ul{
+    //                     flex-direction: column;
+    //                     padding: 0;
+    //                     background: rgba(255,255,255,.8);
+    //                     li{
+    //                         padding: 10px 0;
+    //                         a{}
                             
                             
-                        }
-                    }
-                }
-            }
-            .header-icon{
-                list-style: none;
-                display: flex;
-                padding: 0;
-                .header-like{
-                    margin-right: 5px;
-                    a{
-                        color: #333;
-                        font-size: 30px;
-                    }
-                }
-                .header-signUp{
-                    a{
-                        color: #333;
-                        font-size: 30px;
-                    }
-                }
-            }
-            // .btn{
-            //     background: none;
-            //     width:80px;
-            //     border:  1px solid #ccc;
-            //     border-radius: 5px;
-            //     padding: 10px 5px;
-            //     font-size: 20px;
-            // }
+    //                     }
+    //                 }
+    //             }
+    //         }
+    //         .header-icon{
+    //             list-style: none;
+    //             display: flex;
+    //             padding: 0;
+    //             .header-like{
+    //                 margin-right: 5px;
+    //                 a{
+    //                     color: #333;
+    //                     font-size: 30px;
+    //                 }
+    //             }
+    //             .header-signUp{
+    //                 a{
+    //                     color: #333;
+    //                     font-size: 30px;
+    //                 }
+    //             }
+    //         }
             
-        }
-    }
+    //     }
+    // }
     //메인 슬라이드
-    .mainImg{
-        width: 100%;
-        height: 90vh;
-        img{
-            width: 100%;
+    .scroll_down{
+        position: absolute;
+        width: 2px;
+        height: 80px;
+        bottom: 20px;
+        left: 50%;
+        background: rgba(255,255,255,0.4);
+        z-index: 10;
+        overflow: hidden;
+        &::after{
+            display: block;
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 2px;
             height: 100%;
+            background: #fff;
+            animation: lineActiveAnimation 1.9s cubic-bezier(0.445,0.05,0.55,0.95) infinite;
+        }
+        @keyframes lineActiveAnimation {
+            0%{-webkit-transform:scaleY(1);transform:scaleY(1);-webkit-transform-origin:center top;transform-origin:center bottom}
+            49%{-webkit-transform:scaleY(0);transform:scaleY(0);-webkit-transform-origin:center top;transform-origin:center bottom}
+            50%{-webkit-transform:scaleY(0);transform:scaleY(0);-webkit-transform-origin:center bottom;transform-origin:center top}
+            99%{-webkit-transform:scaleY(1);transform:scaleY(1);-webkit-transform-origin:center bottom;transform-origin:center top}
+            100%{-webkit-transform:scaleY(1);transform:scaleY(1);-webkit-transform-origin:center bottom;transform-origin:center top}
+            }
+    }
+    .mainImg{
+        width: 100vw;
+        height: 100vh;
+        img{
+            width: 100vw;
+            height: 100vh;
         }
     }
     //banner
     .banner{
+        position: relative;
         width: 100%;
-        height: 200px;
-        background: url(./img/banner.jpg);
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        p{
-            color: #fff;
-            font-size: 50px;
+        height: 300px;
+        margin: 100px 0 100px;
+        overflow: hidden;
+        background: url(./img/default_banner.jpg)50% 50% no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
+        .banner-text{
+            margin: 0 auto;
+            padding-top: 50px;
+            box-sizing: border-box;
+            //수정중
+            p{
+                font-size: 14px;
+                text-align: center;
+                opacity: 1;
+                transform: translate3d(0,0px,0);
+                transition: 1s;
+            //     &:nth-child(2){
+            //         transition-delay: 0.4s;
+            //     }
+            //     &:nth-child(3){
+            //         transition-delay: 0.6s;
+            //     }
+            //     &:nth-child(4){
+            //         transition-delay: 0.8s;
+            //     }
+            //     &:nth-child(5){
+            //         transition-delay: 1s;
+            //     }
+            //     &:nth-child(6){
+            //         transition-delay: 1.2s;
+            //     }
+            }
         }
     }
     //mdpick
@@ -477,8 +527,6 @@ $desktop-min: 1440px;
         .header{
             width: 100%;
             height: 72px;
-            // border-bottom: 1px solid #ccc;
-            // background: rgba(255,255,255,.8);
             .container{
                 width: 100%;
                 padding: 0 2rem;
@@ -509,27 +557,20 @@ $desktop-min: 1440px;
     }
 
     @include tablet{
-        .header{
-            .container{
-                width: 100%;
-                padding: 0 2rem;
-                box-sizing: border-box;
-                h1{order: 1;}
-                .logo{}
-                .nav{display: none;}
-                .mobileBar{display: block; order: 2;}
-                // .btn{
-                //     background: none;
-                //     width:80px;
-                //     border-radius: 5px;
-                //     padding: 10px 5px;
-                //     order: 3;
-                // }
-                .header-icon{
-                    display: none;
-                }
-            }
-        }
+        // .header{
+        //     .container{
+        //         width: 100%;
+        //         padding: 0 2rem;
+        //         box-sizing: border-box;
+        //         // h1{order: 1;}
+        //         .logo{}
+        //         .nav{display: none;}
+        //         .mobileBar{display: block; }
+        //         .header-icon{
+        //             display: none;
+        //         }
+        //     }
+        // }
         .mdpick{
             width: 100%;
             padding: 80px 20px;
