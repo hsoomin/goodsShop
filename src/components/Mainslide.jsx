@@ -8,7 +8,7 @@ import { Autoplay, Navigation } from 'swiper/modules';
 
 const Mainslide = () => {
     return (
-        <div>
+        <div className='mainSlide'>
             <Swiper
             spaceBetween={10}
             centeredSlides={true}
@@ -23,7 +23,6 @@ const Mainslide = () => {
                 "--swiper-navigation-color": "lavender",
             }}
             className="mySwiper">
-                {/* 이미지 경로 수정하기 */}
                 <SwiperSlide className='mainImg'><img src={process.env.PUBLIC_URL + '/img/mainslide/slide_101.jpg'}  alt="이미지2"/></SwiperSlide>
                 <SwiperSlide className='mainImg'><img src={process.env.PUBLIC_URL + '/img/mainslide/slide_104.png'}  alt="이미지5"/></SwiperSlide>
                 <SwiperSlide className='mainImg'><img src={process.env.PUBLIC_URL + '/img/mainslide/slide_103.jpg'}  alt="이미지4"/></SwiperSlide>

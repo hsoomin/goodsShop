@@ -1,7 +1,9 @@
+import { BiRightArrowAlt } from "react-icons/bi"; 
 import React from 'react';
 import { Swiper, SwiperSlide } from "swiper/react"; // basic
 import "swiper/css"; //basic
 import { Autoplay } from 'swiper/modules';
+import { Link } from "react-router-dom";
 
 const Magazine = () => {
     return (
@@ -37,12 +39,10 @@ const Magazine = () => {
                     }}
                     modules={[Autoplay]}
                     >
-                        <SwiperSlide className='mag-img'><img src={process.env.PUBLIC_URL + '/img/mag1.jpg'} alt="" /></SwiperSlide>
                         <SwiperSlide className='mag-img'><img src={process.env.PUBLIC_URL + '/img/mag2.jpg'} alt="" /></SwiperSlide>
                         <SwiperSlide className='mag-img'><img src={process.env.PUBLIC_URL + '/img/mag5.jpg'} alt="" /></SwiperSlide>
                         <SwiperSlide className='mag-img'><img src={process.env.PUBLIC_URL + '/img/mag3.jpg'} alt="" /></SwiperSlide>
                         <SwiperSlide className='mag-img'><img src={process.env.PUBLIC_URL + '/img/mag4.jpg'} alt="" /></SwiperSlide>
-                        <SwiperSlide className='mag-img'><img src={process.env.PUBLIC_URL + '/img/mag6.png'} alt="" /></SwiperSlide>
                     </Swiper>
                 </div>
             </div>

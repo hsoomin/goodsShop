@@ -1,0 +1,13 @@
+.InteriorSlide{
+    padding-top: 80px;
+    .mySwiper{
+        width: 100%;
+        height: 650px;
+        .SwiperSlide{
+            img{
+                width: 100%;
+                height: 100%;
+            }
+        }
+    }
+}
