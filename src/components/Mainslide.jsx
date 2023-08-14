@@ -23,13 +23,10 @@ const Mainslide = () => {
                 "--swiper-navigation-color": "lavender",
             }}
             className="mySwiper">
-                <SwiperSlide className='mainImg'><img src={process.env.PUBLIC_URL + '/img/mainslide/slide_101.jpg'}  alt="이미지2"/></SwiperSlide>
-                <SwiperSlide className='mainImg'><img src={process.env.PUBLIC_URL + '/img/mainslide/slide_104.png'}  alt="이미지5"/></SwiperSlide>
-                <SwiperSlide className='mainImg'><img src={process.env.PUBLIC_URL + '/img/mainslide/slide_103.jpg'}  alt="이미지4"/></SwiperSlide>
-                <SwiperSlide className='mainImg'><img src={process.env.PUBLIC_URL + '/img/mainslide/slide_100.jpg'}  alt="이미지1"/></SwiperSlide>
-                <SwiperSlide className='mainImg'><img src={process.env.PUBLIC_URL + '/img/mainslide/slide_102.jpg'}  alt="이미지3"/></SwiperSlide>
-                <SwiperSlide className='mainImg'><img src={process.env.PUBLIC_URL + '/img/mainslide/slide_105.png'}  alt="이미지3"/></SwiperSlide>
-                <SwiperSlide className='mainImg'><img src={process.env.PUBLIC_URL + '/img/mainslide/slide_105.jpg'}  alt="이미지3"/></SwiperSlide>
+                <SwiperSlide className='mainImg'><img src={process.env.PUBLIC_URL + '/img/mainslide/slide_101.jpg'}  alt="이미지1"/></SwiperSlide>
+                <SwiperSlide className='mainImg'><img src={process.env.PUBLIC_URL + '/img/mainslide/slide_102.png'}  alt="이미지2"/></SwiperSlide>
+                <SwiperSlide className='mainImg'><img src={process.env.PUBLIC_URL + '/img/mainslide/slide_104.jpg'}  alt="이미지3"/></SwiperSlide>
+                <SwiperSlide className='mainImg'><img src={process.env.PUBLIC_URL + '/img/mainslide/slide_105.png'}  alt="이미지4"/></SwiperSlide>
 
             </Swiper>
             <div className="scroll_down"></div>

@@ -135,14 +135,11 @@ import InteriorList from "../components/InteriorList";
 
 
 
-
-// 수정한거
-
 const Interior = () => {
 
     return (
         <div className='interior-wrap'>
-            <InteriorSlide />
+            {/* <InteriorSlide /> */}
             <InteriorList />
         </div>
     );

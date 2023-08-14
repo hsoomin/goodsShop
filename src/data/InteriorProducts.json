@@ -98,8 +98,8 @@
     {
         "id": 17,
         "imageUrl": "img/interior/in17.jpg",
-        "title": "티슈",
-        "price": "24,000"
+        "title": "CARRY STOOL | OATMEAL",
+        "price": "250,000"
     },
     {
         "id": 18,
@@ -148,5 +148,11 @@
         "imageUrl": "img/interior/in25.jpg",
         "title": "세토 8칸 서랍장",
         "price": "783,000"
+    },
+    {
+        "id": 25,
+        "imageUrl": "img/interior/in26.jpg",
+        "title": "리틀띵스 인테리어 빅스티커 (리무버블)",
+        "price": "9,500"
     }
 ]

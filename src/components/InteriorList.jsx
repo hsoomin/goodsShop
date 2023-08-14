@@ -10,23 +10,30 @@ const InteriorList = () => {
     const additionalVisibleCount = 3; // 스크롤 내릴때마다 추가 3개
     const [visibleCount, setVisibleCount] = useState(initialVisibleCount);
 
-    useEffect(() => {
-        const handleScroll = () => {
-            if (
-                window.innerHeight + window.scrollY >=
-                document.body.offsetHeight
-            ) {
-                setVisibleCount(prevCount => prevCount + additionalVisibleCount);
-            }
-        };
+    //스티키텍스트
+    const [isStickyVisible, setIsStickyVisible] = useState(false); 
+    const handleScroll = () => {
+        // 스크롤 스티키텍스트
+        if (window.scrollY >= 200) {
+            setIsStickyVisible(true);
+        } else {
+            setIsStickyVisible(false);
+        }
+        //스크롤 더보기
+        if (window.innerHeight + window.scrollY >= document.body.offsetHeight) {
+            setVisibleCount(prevCount => prevCount + additionalVisibleCount);
+        }
+    };
 
+    useEffect(() => {
         window.addEventListener('scroll', handleScroll);
+
         return () => {
             window.removeEventListener('scroll', handleScroll);
         };
     }, []);
-    
-    
+
+
     //하트 토글
     const [likedProducts, setLikedProducts] = useState([]);
     const toggleLike = (productId) => {
@@ -58,7 +65,7 @@ const InteriorList = () => {
         }
     };
 
-    
+
     return (
         <div className="interiorList">
             <div className="interior-header">
@@ -87,10 +94,10 @@ const InteriorList = () => {
                 </ul>
             </div>
             <div className="interior-container">
-                <div className='interior-left'>
-                    <div className= "sticky-container" >
+                <div className="interior-left">
+                    <div className= "left-sticky" >
                         <img src={process.env.PUBLIC_URL + '/img/sticky01.jpg'} alt="" className="sticky-img" />
-                        <div className="sticky-txt">
+                        <div className={`sticky-txt ${isStickyVisible ? 'visible' : ''}`}>
                             <h3>INTERIOR</h3>
                         </div>
                     </div>
@@ -126,5 +133,3 @@ const InteriorList = () => {
 };
 
 export default InteriorList;
-
-
