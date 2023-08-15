@@ -16,7 +16,10 @@ console.log('Failed:', errorInfo);
 const Login = () => {
     return (
         <div className='Login' style={{width:'100%',  marginTop:100}}>
-            <h2 style={{textAlign:'center'}}>Sign In</h2>
+           <div className='login-title'>
+                <p style={{textAlign:'center',fontSize:14, marginBottom:14}}>ACCESS YOUR ACCOUNT</p>
+                <h2 style={{textAlign:'center', fontSize:64, margin:0}}>LOGIN</h2>
+           </div>
 
             <Form
             name="basic"
@@ -48,7 +51,7 @@ const Login = () => {
                     },
                 ]}
                 >
-                    <Input />
+                    <Input  style={{border:'none', borderBottom:'1px solid #000', borderRadius:0}}/>
                 </Form.Item>
 
                 <Form.Item
@@ -61,7 +64,7 @@ const Login = () => {
                     },
                 ]}
                 >
-                    <Input.Password />
+                    <Input.Password style={{border:'none', borderBottom:'1px solid #000', borderRadius:0}}/>
                 </Form.Item>
 
                 <Form.Item
