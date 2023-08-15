@@ -63,7 +63,7 @@ const ToggleNav = () => {
                     <div className="header-drop-menu-footer">
                         <ul>
                             <li><NavLink to='/login'>Login</NavLink></li>
-                            <li><NavLink to='/'>Join Us</NavLink></li>
+                            <li><NavLink to='/join'>Join Us</NavLink></li>
                         </ul>
                     </div>
                 </div>

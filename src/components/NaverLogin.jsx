@@ -2,9 +2,9 @@ import React, {useEffect} from 'react';
 
 const NaverLogin = () => {
     useEffect(() => {
-        let naverLogin = new window.naver.LoginWithNaverId({
+        const naverLogin = new window.naver.LoginWithNaverId({
             clientId: `${process.env.REACT_APP_NAVER_CLIENT_ID}`,
-            callbackUrl: `http://localhost:8080/login`,
+            callbackUrl: `http://localhost:3000/login`,
             loginButton: { color: "green", type: 3, height: "50" },
         });
         naverLogin.init();

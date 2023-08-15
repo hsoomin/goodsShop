@@ -1,6 +1,7 @@
 import React from 'react';
 import { Button, Checkbox, Form, Input } from 'antd';
 import NaverLogin from './NaverLogin';
+import KakaoLogin from './KakaoLogin';
 
 
 
@@ -16,10 +17,10 @@ console.log('Failed:', errorInfo);
 const Login = () => {
     return (
         <div className='Login' style={{width:'100%',  marginTop:100}}>
-           <div className='login-title'>
+            <div className='login-title'>
                 <p style={{textAlign:'center',fontSize:14, marginBottom:14}}>ACCESS YOUR ACCOUNT</p>
                 <h2 style={{textAlign:'center', fontSize:64, margin:0}}>LOGIN</h2>
-           </div>
+            </div>
 
             <Form
             name="basic"
@@ -84,11 +85,12 @@ const Login = () => {
                     span: 16,
                 }}
                 >
-                    <Button type="primary" htmlType="submit">Login</Button>
+                    <Button htmlType="submit" size='large' style={{padding:'0 30px'}}>Login</Button>
                 </Form.Item>
             </Form>        
             <p style={{textAlign:'center'}}>간편로그인</p>
             <NaverLogin />
+            <KakaoLogin />
         </div>
     );
 };
