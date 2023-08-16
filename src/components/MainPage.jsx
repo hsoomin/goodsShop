@@ -4,6 +4,7 @@ import React, { useState, useEffect } from 'react';
 import { Link } from "react-router-dom";
 import Mainslide from './Mainslide';
 import Mdpick from './Mdpick';
+import MdTab from './MdTab';
 import Magazine from './Magazine';
 import axios from 'axios';
 import {API_URL} from '../config/constants';
@@ -34,6 +35,7 @@ const MainPage = () => {
         <div>
             <Mainslide/> 
             <Mdpick/> 
+            <MdTab/>
             <Banner/>
             <div className="products">
                 <h2>products</h2>

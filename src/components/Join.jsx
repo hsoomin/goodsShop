@@ -43,7 +43,7 @@ const formItemLayout = {
          span: 24,
       },
       sm: {
-         span: 4,
+         span: 10,
       },
    },
    wrapperCol: {
@@ -138,7 +138,7 @@ const SignupForm = () => {
                <Input.Password />
             </Form.Item>
    
-            <Form.Item className="mb50" name='닉네임'label='닉네임'tooltip='사이트 내 커뮤니티와 장터 판매자 이름으로 사용됩니다'rules={[
+            <Form.Item name='닉네임'label='닉네임' tooltip='사이트 내 커뮤니티와 장터 판매자 이름으로 사용됩니다'rules={[
                   { required: true, message: "닉네임을 입력해주세요", whitespace: true,},
                ]}>
                <Input />
