@@ -4,7 +4,7 @@ const NaverLogin = () => {
     useEffect(() => {
         const naverLogin = new window.naver.LoginWithNaverId({
             clientId: `${process.env.REACT_APP_NAVER_CLIENT_ID}`,
-            callbackUrl: `http://localhost:3000/login`,
+            callbackUrl: 'http://localhost:8080/naverlogin',
             loginButton: { color: "green", type: 3, height: "50" },
         });
         naverLogin.init();
@@ -22,7 +22,7 @@ const NaverLogin = () => {
     
     return (
     <div>
-		<div id="naverIdLogin" style={{textAlign:'center'}} />
+		<div id="naverIdLogin" style={{textAlign:'center', marginRight:10}} />
     </div>
     );
 };

@@ -88,9 +88,11 @@ const Login = () => {
                     <Button htmlType="submit" size='large' style={{padding:'0 30px'}}>Login</Button>
                 </Form.Item>
             </Form>        
-            <p style={{textAlign:'center'}}>간편로그인</p>
-            <NaverLogin />
-            <KakaoLogin />
+            <p style={{textAlign:'center', fontSize:20}}>간편로그인</p>
+            <div className='easy-login' style={{display:'flex', justifyContent:'center', alignItems:'baseline'}}>
+                <NaverLogin />
+                <KakaoLogin />
+            </div>
         </div>
     );
 };
