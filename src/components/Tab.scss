@@ -1,0 +1,52 @@
+.Tab{
+    width: 100%; 
+    margin: 0 auto;
+    margin-top: 100px;
+    .tab-menu{
+        display: flex;
+        width: 100%;
+        list-style: none;
+        padding: 0;
+        text-align: center;
+        height: 70px;
+        button{
+            width: 100%;
+            outline: none;
+            border: none;
+            background: rgb(255, 255, 255);
+            color: #333;
+            border-top: 1px solid rgb(212, 212, 212);
+            &.active{
+                background: rgb(48, 48, 51);
+                color: #fff;
+            }
+        }
+    }
+    .tabList{
+        padding: 70px 100px 60px;
+        box-sizing: border-box;
+        text-align: center;
+        background: rgb(48, 48, 51);
+        display: flex;
+        list-style: none;
+        width: 100%;
+        li{
+            display: flex;
+            flex-direction: column;
+            gap: .5rem;
+            width: 100%;
+            span{
+                color: #fff;
+                font-size: 18px;
+            }
+            .tab-img{
+                width: 100%;
+                img{width: 90%;}
+            }
+            .tab-name{
+            }
+            .tab-price{}
+        }
+        
+    }
+}

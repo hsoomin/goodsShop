@@ -43,16 +43,16 @@ const MdTab = () => {
         {
             id: 6,
             category: "Furniture",
-            name: "keyring",
+            name: "chair",
             price: 24000,
-            image: "product_md3.jpg"
+            image: "product05.jpg"
         },
         {
             id: 7,
             category: "Kitchen",
-            name: "keyring",
+            name: "커트러리",
             price: 24000,
-            image: "product_md3.jpg"
+            image: "product25.jpg"
         },
         {
             id: 8,
@@ -80,21 +80,21 @@ const MdTab = () => {
             category: "Lights",
             name: "keyring",
             price: 24000,
-            image: "product_md3.jpg"
+            image: "product21.jpg"
         },
         {
             id: 12,
             category: "Kitchen",
-            name: "keyring",
+            name: "장갑",
             price: 24000,
-            image: "product_md3.jpg"
+            image: "product07.jpg"
         },
         {
             id: 13,
             category: "Fabric",
-            name: "keyring",
+            name: "커튼",
             price: 24000,
-            image: "product_md3.jpg"
+            image: "product13.jpg"
         },
         {
             id: 14,
@@ -108,7 +108,7 @@ const MdTab = () => {
             category: "Fabric",
             name: "keyring",
             price: 24000,
-            image: "product_md3.jpg"
+            image: "product14.jpg"
         },
     ];
 

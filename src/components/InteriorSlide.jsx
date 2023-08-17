@@ -28,9 +28,9 @@ const InteriorSlide = () => {
                 "--swiper-navigation-color": "#666",
             }}
             >
-                <SwiperSlide className='SwiperSlide'><img src={process.env.PUBLIC_URL + '/img/interior/slide01.jpg'}  alt="이미지2"/></SwiperSlide>
-                <SwiperSlide className='SwiperSlide'><img src={process.env.PUBLIC_URL + '/img/interior/slide02.jpg'}  alt="이미지2"/></SwiperSlide>
-                <SwiperSlide className='SwiperSlide'><img src={process.env.PUBLIC_URL + '/img/interior/slide03.jpg'}  alt="이미지2"/></SwiperSlide>
+                <SwiperSlide className='SwiperSlide'><img src={process.env.PUBLIC_URL + '/img/slide/fa03.jpg'}  alt="이미지2"/></SwiperSlide>
+                <SwiperSlide className='SwiperSlide'><img src={process.env.PUBLIC_URL + '/img/slide/fa04.jpg'}  alt="이미지2"/></SwiperSlide>
+                <SwiperSlide className='SwiperSlide'><img src={process.env.PUBLIC_URL + '/img/slide/fa05.jpg'}  alt="이미지2"/></SwiperSlide>
                 <SwiperSlide className='SwiperSlide'><img src={process.env.PUBLIC_URL + '/img/interior/slide04.jpg'}  alt="이미지2"/></SwiperSlide>
             </Swiper>
         </div>

@@ -3,13 +3,15 @@
         "id": 1,
         "imageUrl": "/img/fabric/fa01.jpg",
         "title": "패턴 양면 4중 거즈 블랭킷-핑크/블루",
-        "price": "39,000"
+        "price": "39,000",
+        "category":"weekly"
     },
     {
         "id": 2,
         "imageUrl": "img/fabric/fa02.jpg",
         "title": "(uni)그라운드 로브 그린스트라이프 w/ Village pkg",
-        "price": "55,000"
+        "price": "55,000",
+        "category":"new"
     },
     {
         "id": 3,
@@ -33,25 +35,29 @@
         "id": 6,
         "imageUrl": "img/fabric/fa06.jpg",
         "title": "bookaz 게으른 뚱보토끼 토둥이 필로우 인형 귀여운 동물 쿠션 집들이 선물",
-        "price": "26,800"
+        "price": "26,800",
+        "category":"weekly"
     },
     {
         "id": 7,
         "imageUrl": "img/fabric/fa07.jpg",
         "title": "마레 온도조절 사계절 차렵이불",
-        "price": "132,250"
+        "price": "132,250",
+        "category":"weekly"
     },
     {
         "id": 8,
         "imageUrl": "img/fabric/fa08.jpg",
         "title": " big waves duvet cover - mint",
-        "price": "300,000"
+        "price": "300,000",
+        "category":"new"
     },
     {
         "id": 9,
         "imageUrl": "img/fabric/fa09.jpg",
         "title": "베베클래식 알러지케어 다운필 키즈 베개솜(40X60)",
-        "price": "33,200"
+        "price": "33,200",
+        "category":"new"
     },
     {
         "id": 10,
@@ -69,7 +75,8 @@
         "id": 12,
         "imageUrl": "img/fabric/fa12.jpg",
         "title": "[멜로우린넨 커튼_white",
-        "price": "78,000"
+        "price": "78,000",
+        "category":"weekly"
     },
     {
         "id": 13,
@@ -87,7 +94,8 @@
         "id": 15,
         "imageUrl": "img/fabric/fa15.jpg",
         "title": "먼지없는 알러지케어 원형방석 식탁 의자방석 커버 4colors",
-        "price": "19,000"
+        "price": "19,000",
+        "category":"new"
     },
     {
         "id": 16,
@@ -111,7 +119,8 @@
         "id": 19,
         "imageUrl": "img/fabric/fa19.jpg",
         "title": "파라다이스 스트라이프 홑겹이불",
-        "price": "42,000"
+        "price": "42,000",
+        "category":"new"
     },
     {
         "id": 20,
@@ -135,7 +144,8 @@
         "id": 23,
         "imageUrl": "img/fabric/fa23.jpg",
         "title": "HANDKERCHIEF SET (IVORY)",
-        "price": "15,000"
+        "price": "15,000",
+        "category":"weekly"
     },
     {
         "id": 24,
