@@ -1,4 +1,3 @@
-import { AiOutlineHeart } from "react-icons/ai";
 import React, { useState } from 'react';
 
 const MdTab = () => {
@@ -114,16 +113,44 @@ const MdTab = () => {
 
     const filteredProducts = products.filter(product => product.category === activeTab);
 
+    const handleTabClick = (tab) => {
+        setActiveTab(tab);
+    };
+
     return (
-        <div className='mdpick'>
+        <div className='mdtab'>
             <h2>BEST ITEM</h2>
             <div className="tabs">
-                {/* <button onClick={() => setActiveTab("ALL")}>ALL</button> */}
-                <button onClick={() => setActiveTab("HomeDeco")}>홈데코</button>
-                <button onClick={() => setActiveTab("Furniture")}>가구</button>
-                <button onClick={() => setActiveTab("Lights")}>조명</button>
-                <button onClick={() => setActiveTab("Fabric")}>페브릭</button>
-                <button onClick={() => setActiveTab("Kitchen")}>주방</button>
+                <button
+                    onClick={() => handleTabClick('HomeDeco')}
+                    className={activeTab === 'HomeDeco' ? 'active' : ''}
+                >
+                    홈데코
+                </button>
+                <button
+                    onClick={() => handleTabClick('Furniture')}
+                    className={activeTab === 'Furniture' ? 'active' : ''}
+                >
+                    가구
+                </button>
+                <button
+                    onClick={() => handleTabClick('Lights')}
+                    className={activeTab === 'Lights' ? 'active' : ''}
+                >
+                    조명
+                </button>
+                <button
+                    onClick={() => handleTabClick('Fabric')}
+                    className={activeTab === 'Fabric' ? 'active' : ''}
+                >
+                    패브릭
+                </button>
+                <button
+                    onClick={() => handleTabClick('Kitchen')}
+                    className={activeTab === 'Kitchen' ? 'active' : ''}
+                >
+                    주방
+                </button>
             </div>
             <div className="mdList">
                 <ul>
@@ -132,10 +159,6 @@ const MdTab = () => {
                             <span className="md-img"><img src={process.env.PUBLIC_URL + `/img/products/${product.image}`} alt="" /></span>
                             <span className="md-name">{product.name}</span>
                             <span className="md-price">{product.price}</span>
-                            <div className="bg">
-                                <p>favorite</p>
-                                <span><AiOutlineHeart /></span>
-                            </div>
                         </li>
                     ))}
                 </ul>
