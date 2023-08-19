@@ -1,7 +1,7 @@
 import React, { useState , useEffect} from 'react';
 import './Fabric.scss';
-import InteriorSlide from '../components/InteriorSlide';
-import Tab from '../components/Tab';
+import FabricSlide from '../components/FabricSlide';
+import FabricTab from '../components/FabricTab';
 import FabricProducts from '../data/FabricProducts.json';
 import { AiTwotoneHeart, AiOutlineHeart } from "react-icons/ai";
 
@@ -57,8 +57,8 @@ const Fabric = () => {
 
     return (
         <div>
-            <InteriorSlide />
-            <Tab />
+            <FabricSlide />
+            <FabricTab />
             <div className="Fabric">
                 <div className="fabric-header">
                     <div className="title">

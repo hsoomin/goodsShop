@@ -1,5 +1,5 @@
 import './Interior.scss';
-import InteriorSlide from "../components/InteriorSlide";
+import FabricSlide from "../components/FabricSlide";
 import InteriorList from "../components/InteriorList";
 
 
@@ -139,7 +139,7 @@ const Interior = () => {
 
     return (
         <div className='interior-wrap'>
-            {/* <InteriorSlide /> */}
+            {/* <FabricSlide /> */}
             <InteriorList />
         </div>
     );

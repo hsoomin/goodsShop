@@ -8,17 +8,18 @@ import Fabric from './pages/Fabric';
 import Event from './pages/Event';
 import UploadPage from './components/UploadPage';
 import ProductPage from './components/ProductPage';
-import VerticalScrollBar from './components/VerticalScrollBar';
+import HorizontalScrollBar from './components/HorizontalScrollBar';
 import ToggleNav from './components/ToggleNav';
 import Login from './components/Login';
 import Join from './components/Join';
+import QuickButton from './components/QuickButton';
 
 
 
 function App() {
   return (
     <div className="App">
-      <VerticalScrollBar />
+      <HorizontalScrollBar />
       <ToggleNav/>
       <Routes>
         <Route path='/' element={<MainPage/>}/>
@@ -32,6 +33,7 @@ function App() {
         <Route path='/ProductPage/:id' element={<ProductPage/>} />
       </Routes>
       <Footer/>
+      <QuickButton />
     </div>
   );
 }

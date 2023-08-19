@@ -1,7 +1,8 @@
-// 우선 css에   ::-webkit-scrollbar{width: 0px;}   를 작성하여 스크롤바를 없애준다.
 import React, { useState, useEffect } from 'react';
 
-const VerticalScrollBar = () => {
+const HorizontalScrollBar = () => {
+  
+  //css에   ::-webkit-scrollbar{width: 0px;}   를 작성하여 스크롤바를 없애준다.
   const [scrollPercentage, setScrollPercentage] = useState(0);
 
   const handleScroll = () => {
@@ -35,4 +36,4 @@ const VerticalScrollBar = () => {
   );
 };
 
-export default VerticalScrollBar;
+export default HorizontalScrollBar;

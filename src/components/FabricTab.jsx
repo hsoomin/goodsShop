@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import './Tab.scss'
+import './FabricTab.scss'
 import FabricProducts from '../data/FabricProducts.json';
 
 

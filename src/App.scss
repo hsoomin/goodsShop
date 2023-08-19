@@ -1,3 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Gowun+Dodum&family=Ysabeau+SC:wght@200;300;400;500;600&display=swap');
+body{font-family: 'Ysabeau SC','Gowun Dodum', sans-serif;}
+
+
 //반응형 사이즈
 $phone-max: 360px;
 $mobile-max: 768px;
@@ -36,12 +40,9 @@ a{text-decoration: none; color: #333;}
         left: 0;
         width: 100%;
         height: 72px;
-        // margin: 20px 20px 0 20px; //오른쪽 이상함
-        // border-top: 1px solid rgba(255,255,255,0.3);
         border-bottom: 1px solid rgba(255,255,255,0.3);
         z-index: 1000;
         &.scrolled{
-            // margin: 0;
             background: #fff;
             box-shadow: 5px 5px 40px rgb(0,0,0,0.1);
             transition: .3s;
@@ -57,7 +58,7 @@ a{text-decoration: none; color: #333;}
             justify-content: space-between;
             h1{
                 a{
-                    img{ width: 100px;}
+                    img{ width: 85px;}
                 }
             }
             .menuBar{
@@ -134,34 +135,34 @@ a{text-decoration: none; color: #333;}
             }
         }
     }
-    .scroll_down{
-        position: absolute;
-        width: 2px;
-        height: 80px;
-        bottom: 20px;
-        left: 50%;
-        background: rgba(255,255,255,0.4);
-        z-index: 10;
-        overflow: hidden;
-        &::after{
-            display: block;
-            content: "";
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 2px;
-            height: 100%;
-            background: #fff;
-            animation: lineActiveAnimation 1.9s cubic-bezier(0.445,0.05,0.55,0.95) infinite;
-        }
-        @keyframes lineActiveAnimation {
-            0%{-webkit-transform:scaleY(1);transform:scaleY(1);-webkit-transform-origin:center top;transform-origin:center bottom}
-            49%{-webkit-transform:scaleY(0);transform:scaleY(0);-webkit-transform-origin:center top;transform-origin:center bottom}
-            50%{-webkit-transform:scaleY(0);transform:scaleY(0);-webkit-transform-origin:center bottom;transform-origin:center top}
-            99%{-webkit-transform:scaleY(1);transform:scaleY(1);-webkit-transform-origin:center bottom;transform-origin:center top}
-            100%{-webkit-transform:scaleY(1);transform:scaleY(1);-webkit-transform-origin:center bottom;transform-origin:center top}
-            }
-    }
+    // .scroll_down{
+    //     position: absolute;
+    //     width: 2px;
+    //     height: 80px;
+    //     bottom: 20px;
+    //     left: 50%;
+    //     background: rgba(255,255,255,0.4);
+    //     z-index: 10;
+    //     overflow: hidden;
+    //     &::after{
+    //         display: block;
+    //         content: "";
+    //         position: absolute;
+    //         top: 0;
+    //         left: 0;
+    //         width: 2px;
+    //         height: 100%;
+    //         background: #fff;
+    //         animation: lineActiveAnimation 1.9s cubic-bezier(0.445,0.05,0.55,0.95) infinite;
+    //     }
+    //     @keyframes lineActiveAnimation {
+    //         0%{-webkit-transform:scaleY(1);transform:scaleY(1);-webkit-transform-origin:center top;transform-origin:center bottom}
+    //         49%{-webkit-transform:scaleY(0);transform:scaleY(0);-webkit-transform-origin:center top;transform-origin:center bottom}
+    //         50%{-webkit-transform:scaleY(0);transform:scaleY(0);-webkit-transform-origin:center bottom;transform-origin:center top}
+    //         99%{-webkit-transform:scaleY(1);transform:scaleY(1);-webkit-transform-origin:center bottom;transform-origin:center top}
+    //         100%{-webkit-transform:scaleY(1);transform:scaleY(1);-webkit-transform-origin:center bottom;transform-origin:center top}
+    //         }
+    // }
     //mdpick
     .mdpick{
         width: 100%; 
@@ -197,7 +198,7 @@ a{text-decoration: none; color: #333;}
                         top: 0;
                         left: 0;
                         width: 100%;
-                        height: 91%;
+                        height: 90%;
                         background: rgba(0,0,0,.7);
                         display: flex;
                         justify-content: center;
@@ -323,20 +324,7 @@ a{text-decoration: none; color: #333;}
         padding:  0 2rem;
         box-sizing: border-box;
         margin-top: 100px;
-        h2{
-            position: relative;
-            z-index: 1;
-            &:after{
-                content: "";
-                height: 10px;
-                width: 105px;
-                position: absolute;
-                top: 18px;
-                left: -3px;
-                background: greenyellow;
-                z-index: -1;
-            }
-        }
+        h2{}
         .register-btn{
             background-color: transparent;
             border: none;
@@ -347,7 +335,6 @@ a{text-decoration: none; color: #333;}
             z-index: 9;
             padding-bottom: 5px;
             span{
-                font-family: 'NanumSquareNeo';
             }
         }
         .p-list{
@@ -450,7 +437,6 @@ a{text-decoration: none; color: #333;}
                             color: #fff;
                             font-size: 80px;
                             font-weight: bold;
-                            font-family: 'REM';
                             -webkit-text-stroke:1px #000;
                             transform: rotate(90deg);
                             

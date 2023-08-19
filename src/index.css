@@ -9,12 +9,5 @@
 
 body {
   margin: 0;
-  font-family:'Ysabeau SC','REM','NanumSquareNeo', sans-serif;
-  
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: 'Lunasima', sans-serif;
-}

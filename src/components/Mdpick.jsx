@@ -4,7 +4,7 @@ import React from 'react';
 const Mdpick = () => {
     return (
         <div className='mdpick'>
-            <h2>MOST POPULAR</h2>
+            <h2>BEST ITEM</h2>
             <div className="mdList">
                 <ul>
                     <li>
