@@ -1,9 +1,23 @@
 import { AiOutlineHeart } from "react-icons/ai"; 
-import React from 'react';
+import React,{useEffect} from 'react';
+import Aos from "aos";
 
 const Mdpick = () => {
+
+    useEffect(()=> {
+        Aos.init({
+            duration: 2000, 
+            delay: 100,     
+        });
+    },[]);
+
+
     return (
-        <div className='mdpick'>
+        <div 
+        className='mdpick'  
+        data-aos="fade-up"
+        data-aos-anchor-placement="top-bottom"
+        >
             <h2>BEST ITEM</h2>
             <div className="mdList">
                 <ul>

@@ -4,6 +4,7 @@ import axios from 'axios';
 import {API_URL} from '../config/constants';
 import { useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
+import Aos from "aos";
 
 const Page = () => {
 
@@ -23,8 +24,21 @@ const Page = () => {
 
     const navigate =useNavigate();
     
+    useEffect(()=> {
+        Aos.init({
+            duration: 2000, 
+            delay: 500,     
+        });
+    },[]);
+
+
+
     return (
-        <div className="products">
+        <div 
+        className="products"
+        data-aos="fade-up"
+        data-aos-anchor-placement="top-bottom"
+        >
             <h2>products</h2>
             <button className="register-btn" onClick={()=>{navigate('/UploadPage')}}>
                 <span>상품 등록하기 <AiOutlineArrowRight /></span>

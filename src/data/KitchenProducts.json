@@ -9,19 +9,22 @@
         "id": 2,
         "imageUrl": "img/kitchen/ki02.jpg",
         "title": "오븐 사용 가능한 스텐 웨이브 트레이 [뚜껑+트레이] 2종세트",
-        "price": "15,900"
+        "price": "15,900",
+        "category":"new"
     },
     {
         "id": 3,
         "imageUrl": "img/kitchen/ki03.jpg",
         "title": "에델 실리콘 조리도구 라이트 7종세트",
-        "price": "32,900"
+        "price": "32,900",
+        "category":"new"
     },
     {
         "id": 4,
         "imageUrl": "img/kitchen/ki04.jpg",
         "title": "스텐 원형 메쉬 트레이 [채반+트레이] 3종세트 소/대/특대'",
-        "price": "22,000"
+        "price": "22,000",
+        "category":"new"
     },
     {
         "id": 5,
@@ -33,7 +36,8 @@
         "id": 6,
         "imageUrl": "img/kitchen/ki06.jpg",
         "title": "펠로우 스태그 EKG 전기 드립포트 900ml - 블랙",
-        "price": "312,000"
+        "price": "312,000",
+        "category":"new"
     },
     {
         "id": 7,
@@ -51,7 +55,8 @@
         "id": 9,
         "imageUrl": "img/kitchen/ki09.jpg",
         "title": " 커브형 내열 유리빨대 컬러 5종",
-        "price": "1,000"
+        "price": "1,000",
+        "category":"weekly"
     },
     {
         "id": 10,
@@ -63,7 +68,8 @@
         "id": 11,
         "imageUrl": "img/kitchen/ki11.jpg",
         "title": "소일 _ 작은접시, 앞접시 (4colors)",
-        "price": "27,000"
+        "price": "27,000",
+        "category":"weekly"
     },
     {
         "id": 12,
@@ -105,7 +111,8 @@
         "id": 18,
         "imageUrl": "img/kitchen/ki18.jpg",
         "title": "뉴달주병세트_백야/청야 (2colors)",
-        "price": "65,000"
+        "price": "65,000",
+        "category":"new"
     },
     {
         "id": 19,
@@ -141,18 +148,21 @@
         "id": 24,
         "imageUrl": "img/kitchen/ki24.jpg",
         "title": "황동 골드 메탈 오프너 병따개",
-        "price": "25,000"
+        "price": "25,000",
+        "category":"weekly"
     },
     {
         "id": 25,
         "imageUrl": "img/kitchen/ki25.jpg",
         "title": "피카 IH(인덕션) 프라이팬 24cm",
-        "price": "42,000"
+        "price": "42,000",
+        "category":"weekly"
     },
     {
         "id": 26,
         "imageUrl": "img/kitchen/ki26.jpg",
         "title": "헤리티지 목단 현玄 커피잔 2조 세트 (4p)",
-        "price": "560,000"
+        "price": "560,000",
+        "category":"weekly"
     }
 ]

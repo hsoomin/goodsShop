@@ -3,31 +3,36 @@
         "id": 1,
         "imageUrl": "/img/interior/in01.jpg",
         "title": "스피아노 망고 푸딩 단스탠드 SS-5900S",
-        "price": "61,900"
+        "price": "61,900",
+        "category":"new"
     },
     {
         "id": 2,
         "imageUrl": "img/interior/in02.png",
         "title": "뽀글이 개구리 인형",
-        "price": "23,800"
+        "price": "23,800",
+        "category":"new"
     },
     {
         "id": 3,
         "imageUrl": "img/interior/in03.jpg",
         "title": " 괴마옥 선인장 미니화분",
-        "price": "22,000"
+        "price": "22,000",
+        "category":"new"
     },
     {
         "id": 4,
         "imageUrl": "img/interior/in04.jpg",
         "title": "플러피 타임 클락 1'11'",
-        "price": "69,000"
+        "price": "69,000",
+        "category":"new"
     },
     {
         "id": 5,
         "imageUrl": "img/interior/in05.png",
         "title": "PUFFY BED BOOK (sky/black)",
-        "price": "49,000"
+        "price": "49,000",
+        "category":"new"
     },
     {
         "id": 6,
@@ -51,25 +56,29 @@
         "id": 9,
         "imageUrl": "img/interior/in09.jpg",
         "title": " 힌｜페블 플레이트 M · 스톤 화이트",
-        "price": "38,000"
+        "price": "38,000",
+        "category":"weekly"
     },
     {
         "id": 10,
         "imageUrl": "img/interior/in10.jpg",
         "title": "루미르R 포터블 램프 - 크롬 무선 조명",
-        "price": "165,000"
+        "price": "165,000",
+        "category":"weekly"
     },
     { 
         "id": 11,
         "imageUrl": "img/interior/in11.jpg",
         "title": "[HAY] Tint Wine Glass Set, Pink & Yellow (541224)",
-        "price": "67,000"
+        "price": "67,000",
+        "category":"weekly"
     },
     {
         "id": 12,
         "imageUrl": "img/interior/in12.jpg",
         "title": "Quater chair (12 colors)",
-        "price": "530,000"
+        "price": "530,000",
+        "category":"weekly"
     },
     {
         "id": 13,
@@ -87,7 +96,8 @@
         "id": 15,
         "imageUrl": "img/interior/in15.jpg",
         "title": "[HAY] Analog Wall Clock, 2 colors",
-        "price": "159,000"
+        "price": "159,000",
+        "category":"weekly"
     },
     {
         "id": 16,
@@ -150,9 +160,15 @@
         "price": "783,000"
     },
     {
-        "id": 25,
+        "id": 26,
         "imageUrl": "img/interior/in26.jpg",
         "title": "리틀띵스 인테리어 빅스티커 (리무버블)",
         "price": "9,500"
+    },
+    {
+        "id": 27,
+        "imageUrl": "img/interior/in27.jpg",
+        "title": " 레어로우 워크 테이블 (18 Colors)",
+        "price": "450,000"
     }
 ]

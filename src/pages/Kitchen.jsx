@@ -1,31 +1,23 @@
-import { AiTwotoneHeart, AiOutlineHeart } from "react-icons/ai";
-import React, { useState, useEffect } from 'react';
+import React, { useState , useEffect} from 'react';
+// import './Fabric.scss';
+import KitchenSlide from '../components/KitchenSlide';
+import KitchenTab from '../components/KitchenTab';
 import KitchenProducts from '../data/KitchenProducts.json';
-import './Kitchen.scss';
+import { KitchenContainer, KitchenHeader, Title, CategoryList, CategoryItem, KitchenList, KitchenCard, KitchenImage, KitchenInfo, LikeButton, HeartIcon, LikeIcon} from '../styles/KitchenStyles';
 
-const Fabric = () => {
+
+
+const Kitchen = () => {
     
-    //스크롤 더보기
-    const initialVisibleCount = 6; // 처음에 보이는 6개
-    const additionalVisibleCount = 3; // 스크롤 내릴때마다 추가 3개
-    const [visibleCount, setVisibleCount] = useState(initialVisibleCount);
-
-    //스티키텍스트
-    const [isStickyVisible, setIsStickyVisible] = useState(false); 
-    const handleScroll = () => {
-        // 스크롤 스티키텍스트
-        if (window.scrollY >= 200) {
-            setIsStickyVisible(true);
-        } else {
-            setIsStickyVisible(false);
-        }
-        //스크롤 더보기
-        if (window.innerHeight + window.scrollY >= document.body.offsetHeight) {
-            setVisibleCount(prevCount => prevCount + additionalVisibleCount);
-        }
-    };
+    const productsPerPage = 6; // 처음에 보이는 6개
+    const [visibleProducts, setVisibleProducts] = useState(productsPerPage);
 
     useEffect(() => {
+        const handleScroll = () => {
+            if (window.innerHeight + window.scrollY >= document.body.offsetHeight - 200 ) {
+                setVisibleProducts(prevVisibleProducts => prevVisibleProducts + productsPerPage);
+            }
+        };
         window.addEventListener('scroll', handleScroll);
 
         return () => {
@@ -44,15 +36,15 @@ const Fabric = () => {
         }
     };
 
-    //탭
-    const [activeTab, setActiveTab] = useState('all');
+
+    const [activeTab, setActiveTab] = useState('new');
     //오름차순, 내림차순
     const [sortedProducts, setSortedProducts] = useState([...KitchenProducts]);
     //가격에서 , 빼기
     const removeCommas = (price) => {
         return price.replace(/,/g, '');
     };
-
+    //
     const handleTabClick = (tab) => {
         setActiveTab(tab);
 
@@ -65,71 +57,54 @@ const Fabric = () => {
         }
     };
 
-
     return (
-        <div className="Kitchen">
-            <div className="kitchen-header">
-                <div className="title">
-                    <h2>Kitchen</h2>
-                </div>
-                <ul className="category">
-                    <li
-                    className={activeTab === 'all' ? 'active' : ''}
-                    onClick={() => handleTabClick('all')}
-                    >
-                        ALL
-                    </li>
-                    <li
-                    className={activeTab === 'low-price' ? 'active' : ''}
-                    onClick={() => handleTabClick('low-price')}
-                    >
-                        LOW PRICE
-                    </li>
-                    <li
-                    className={activeTab === 'high-price' ? 'active' : ''}
-                    onClick={() => handleTabClick('high-price')}
-                    >
-                        HIGH PRICE
-                    </li>
-                </ul>
-            </div>
-            <div className="kitchen-container">
-                <div className="kitchen-left">
-                    <div className= "left-sticky" >
-                        <img src={process.env.PUBLIC_URL + '/img/sticky02.jpg'} alt="" className="sticky-img" />
-                        <div className={`sticky-txt ${isStickyVisible ? 'visible' : ''}`}>
-                            <h3>Kitchen</h3>
-                        </div>
+        <div>
+            <KitchenSlide />
+            <KitchenTab />
+            <KitchenContainer>
+                <KitchenHeader className="kitchen-header" >
+                    <div className="title">
+                        <Title>Kitchen</Title>
                     </div>
-                </div>
-                <div className='kitchen-right'>
-                    <div className="kitchen-right-inner">
-                    {sortedProducts
-                    .slice(0, visibleCount)
-                    .map(product => (
-                        <div key={product.id} className="kitchen-list">
-                            <div className="kitchen-img">
-                                <img src={process.env.PUBLIC_URL + product.imageUrl} alt="" />
-                            </div>
-                            <div className="kitchen-info">
+                    <CategoryList className="category">
+                        <CategoryItem 
+                        className={activeTab === 'all' ? 'active' : ''}
+                        onClick={() => handleTabClick('all')}>ALL</CategoryItem>
+                        <CategoryItem 
+                        className={activeTab === 'low-price' ? 'active' : ''}
+                        onClick={() => handleTabClick('low-price')}>LOW PRICE</CategoryItem>
+                        <CategoryItem 
+                        className={activeTab === 'high-price' ? 'active' : ''}
+                        onClick={() => handleTabClick('high-price')}>HIGH PRICE</CategoryItem>
+                    </CategoryList>
+                </KitchenHeader>
+                <KitchenList className="kitchen-list">
+                    {sortedProducts.slice(0, visibleProducts).map(product => (
+                        <KitchenCard className="kitchen-card" key={product.id}>
+                            <KitchenImage className="kitchen-img">
+                                <img src={product.imageUrl} alt={product.title} />
+                            </KitchenImage>
+                            <KitchenInfo className="kitchen-info">
                                 <span className="info-title">{product.title}</span>
                                 <span className="info-price">{product.price}원</span>
-                            </div>
-                            <div className="kitchen-btn">
-                                <button className='kitchen-cart' onClick={() => toggleLike(product.id)}>
+                            </KitchenInfo>
+                            <div className='kitchen-btn'>
+                                <LikeButton className='kitchen-cart' onClick={() => toggleLike(product.id)}>
                                     CART 
                                     <span className={likedProducts.includes(product.id) ? "like-icon" : "heart-icon"}>
-                                        {likedProducts.includes(product.id) ? <AiTwotoneHeart /> : <AiOutlineHeart />}
+                                        {likedProducts.includes(product.id) ? <HeartIcon/> : <LikeIcon/>}
                                     </span>
-                                </button>
+                                </LikeButton>
                             </div>
-                        </div>
-                        ))}
-                    </div>
-                </div>
-            </div>
+                        </KitchenCard>
+                    ))}
+                </KitchenList>
+            </KitchenContainer>
         </div>
     );
 };
 
-export default Fabric;
+export default Kitchen;
+
+
+

@@ -1,18 +1,18 @@
 import React from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay, Pagination, Navigation } from 'swiper/modules';
-import './InteriorSlide.scss'
+import './FabricSlide.scss'
 
 
-const InteriorSlide = () => {
+const FabricSlide = () => {
     return (
-        <div className='InteriorSlide'>
+        <div className='FabricSlide'>
             <Swiper
             className="mySwiper"
             spaceBetween={10}
             centeredSlides={true}
             autoplay={{
-            delay: 3000,
+            delay: 4000,
             disableOnInteraction: false,
             }}
             pagination={{
@@ -26,7 +26,6 @@ const InteriorSlide = () => {
                 "--swiper-navigation-color": "#666",
             }}
             >
-                <SwiperSlide className='SwiperSlide'><img src={process.env.PUBLIC_URL + '/img/slide/fa03.jpg'}  alt="이미지2"/></SwiperSlide>
                 <SwiperSlide className='SwiperSlide'><img src={process.env.PUBLIC_URL + '/img/slide/fa04.jpg'}  alt="이미지2"/></SwiperSlide>
                 <SwiperSlide className='SwiperSlide'><img src={process.env.PUBLIC_URL + '/img/slide/fa05.jpg'}  alt="이미지2"/></SwiperSlide>
                 <SwiperSlide className='SwiperSlide'><img src={process.env.PUBLIC_URL + '/img/interior/slide04.jpg'}  alt="이미지2"/></SwiperSlide>
@@ -35,4 +34,4 @@ const InteriorSlide = () => {
     );
 };
 
-export default InteriorSlide;
+export default FabricSlide;

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import FabricProducts from '../data/FabricProducts.json';
+import InteriorProducts from '../data/InteriorProducts.json';
 import styled, { css } from 'styled-components';
 
 const breakpoints = {
@@ -94,9 +94,9 @@ const TabPrice = styled.span`
 `;
 
 
-const FabricTab = () => {
+const InteriorTab = () => {
     const [activeTab, setActiveTab] = useState('new');
-    const filteredProducts = FabricProducts.filter(
+    const filteredProducts = InteriorProducts.filter(
         (product) => product.category === activeTab
     );
 
@@ -135,4 +135,4 @@ const FabricTab = () => {
     );
 };
 
-export default FabricTab;
+export default InteriorTab;
