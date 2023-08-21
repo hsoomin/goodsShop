@@ -27,6 +27,9 @@ const InteriorSlide = () => {
             }}
             >
                 <SwiperSlide className='SwiperSlide'>
+                    <img src={process.env.PUBLIC_URL + '/img/slide/in00.jpg'}  alt="이미지1"/>
+                </SwiperSlide>
+                <SwiperSlide className='SwiperSlide'>
                     <img src={process.env.PUBLIC_URL + '/img/slide/in01.jpg'}  alt="이미지2"/>
                     <div className="textBox">
                         <h4>일하는 이들을 위해</h4>
@@ -34,10 +37,17 @@ const InteriorSlide = () => {
                     </div>
                 </SwiperSlide>
                 <SwiperSlide className='SwiperSlide'>
-                    <img src={process.env.PUBLIC_URL + '/img/slide/in02.jpg'}  alt="이미지2"/>
+                    <img src={process.env.PUBLIC_URL + '/img/slide/in02.jpg'}  alt="이미지3"/>
                     <div className="textBox">
                         <h4>고요한 빛</h4>
                         <p>LUMIR</p>
+                    </div>
+                </SwiperSlide>
+                <SwiperSlide className='SwiperSlide'>
+                    <img src={process.env.PUBLIC_URL + '/img/slide/in03.jpg'}  alt="이미지4"/>
+                    <div className="textBox">
+                        <h4>디자이너 가구 모음</h4>
+                        <p>BRAND HIGHLIGHT</p>
                     </div>
                 </SwiperSlide>
             </Swiper>

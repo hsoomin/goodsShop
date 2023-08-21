@@ -26,9 +26,19 @@ const FabricSlide = () => {
                 "--swiper-navigation-color": "#666",
             }}
             >
-                <SwiperSlide className='SwiperSlide'><img src={process.env.PUBLIC_URL + '/img/slide/fa04.jpg'}  alt="이미지2"/></SwiperSlide>
-                <SwiperSlide className='SwiperSlide'><img src={process.env.PUBLIC_URL + '/img/slide/fa05.jpg'}  alt="이미지2"/></SwiperSlide>
-                <SwiperSlide className='SwiperSlide'><img src={process.env.PUBLIC_URL + '/img/interior/slide04.jpg'}  alt="이미지2"/></SwiperSlide>
+                <SwiperSlide className='SwiperSlide'><img src={process.env.PUBLIC_URL + '/img/slide/fa01.jpg'}  alt="이미지2"/>
+                    <div className="textBox">
+                        <h4>욕실에 더하는 취향</h4>
+                        <p>#BATH ITEM</p>
+                    </div>
+                </SwiperSlide>
+                <SwiperSlide className='SwiperSlide'><img src={process.env.PUBLIC_URL + '/img/slide/fa02.jpg'}  alt="이미지2"/>
+                    <div className="textBox">
+                        <h4>오늘의 패턴</h4>
+                        <p>RITTEN</p>
+                    </div>
+                </SwiperSlide>
+                <SwiperSlide className='SwiperSlide'><img src={process.env.PUBLIC_URL + '/img/slide/fa03.jpg'}  alt="이미지2"/></SwiperSlide>
             </Swiper>
         </div>
     );
