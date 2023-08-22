@@ -1,9 +1,10 @@
+import { AiOutlineHeart,AiTwotoneHeart } from "react-icons/ai"; 
 import React, { useState , useEffect} from 'react';
-// import './Fabric.scss';
+import './Fabric.scss';
 import FabricSlide from '../components/FabricSlide';
 import FabricTab from '../components/FabricTab';
 import FabricProducts from '../data/FabricProducts.json';
-import { FabricContainer, FabricHeader, Title, CategoryList, CategoryItem, FabricList, FabricCard, FabricImage, FabricInfo, LikeButton, HeartIcon, LikeIcon} from '../styles/FabricStyles';
+// import { FabricContainer, FabricHeader, Title, CategoryList, CategoryItem, FabricList, FabricCard, FabricImage, FabricInfo, LikeButton, HeartIcon, LikeIcon} from '../styles/FabricStyles';
 
 
 
@@ -62,45 +63,45 @@ const Fabric = () => {
         <div>
             <FabricSlide />
             <FabricTab />
-            <FabricContainer className="Fabric">
-                <FabricHeader className="fabric-header" >
+            <div className="Fabric">
+                <div className="fabric-header" >
                     <div className="title">
-                        <Title>Fabric</Title>
+                        <h2>Fabric</h2>
                     </div>
-                    <CategoryList className="category">
-                        <CategoryItem 
+                    <ul className="category">
+                        <li 
                         className={activeTab === 'all' ? 'active' : ''}
-                        onClick={() => handleTabClick('all')}>ALL</CategoryItem>
-                        <CategoryItem 
+                        onClick={() => handleTabClick('all')}>ALL</li>
+                        <li 
                         className={activeTab === 'low-price' ? 'active' : ''}
-                        onClick={() => handleTabClick('low-price')}>LOW PRICE</CategoryItem>
-                        <CategoryItem 
+                        onClick={() => handleTabClick('low-price')}>LOW PRICE</li>
+                        <li 
                         className={activeTab === 'high-price' ? 'active' : ''}
-                        onClick={() => handleTabClick('high-price')}>HIGH PRICE</CategoryItem>
-                    </CategoryList>
-                </FabricHeader>
-                <FabricList className="fabric-list">
+                        onClick={() => handleTabClick('high-price')}>HIGH PRICE</li>
+                    </ul>
+                </div>
+                <div className="fabric-list">
                     {sortedProducts.slice(0, visibleProducts).map(product => (
-                        <FabricCard className="fabric-card" key={product.id}>
-                            <FabricImage className="fabric-img">
+                        <div className="fabric-card" key={product.id}>
+                            <div className="fabric-img">
                                 <img src={product.imageUrl} alt={product.title} />
-                            </FabricImage>
-                            <FabricInfo className="fabric-info">
+                            </div>
+                            <div className="fabric-info">
                                 <span className="info-title">{product.title}</span>
                                 <span className="info-price">{product.price}원</span>
-                            </FabricInfo>
+                            </div>
                             <div className='fabric-btn'>
-                                <LikeButton className='fabric-cart' onClick={() => toggleLike(product.id)}>
+                                <button className='fabric-cart' onClick={() => toggleLike(product.id)}>
                                     CART 
                                     <span className={likedProducts.includes(product.id) ? "like-icon" : "heart-icon"}>
-                                        {likedProducts.includes(product.id) ? <HeartIcon/> : <LikeIcon/>}
+                                        {likedProducts.includes(product.id) ? <AiTwotoneHeart/> : <AiOutlineHeart/>}
                                     </span>
-                                </LikeButton>
+                                </button>
                             </div>
-                        </FabricCard>
+                        </div>
                     ))}
-                </FabricList>
-            </FabricContainer>
+                </div>
+            </div>
         </div>
     );
 };

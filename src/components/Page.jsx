@@ -25,12 +25,8 @@ const Page = () => {
     const navigate =useNavigate();
     
     useEffect(()=> {
-        Aos.init({
-            duration: 2000, 
-            delay: 500,     
-        });
+        Aos.init({ });
     },[]);
-
 
 
     return (
@@ -38,6 +34,8 @@ const Page = () => {
         className="products"
         data-aos="fade-up"
         data-aos-anchor-placement="top-bottom"
+        data-aos-duration="1000"
+        data-aos-delay="300"
         >
             <h2>products</h2>
             <button className="register-btn" onClick={()=>{navigate('/UploadPage')}}>

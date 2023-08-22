@@ -1,9 +1,10 @@
 import React, { useState , useEffect} from 'react';
-// import './Fabric.scss';
+import './Interior.scss';
+import { AiOutlineHeart,AiTwotoneHeart } from "react-icons/ai"; 
 import InteriorSlide from '../components/InteriorSlide';
 import InteriorTab from '../components/InteriorTab';
 import InteriorProducts from '../data/InteriorProducts.json';
-import { InteriorContainer, InteriorHeader, Title, CategoryList, CategoryItem, InteriorList, InteriorCard, InteriorImage, InteriorInfo, LikeButton, HeartIcon, LikeIcon} from '../styles/InteriorStyles';
+// import { InteriorContainer, InteriorHeader, Title, CategoryList, CategoryItem, InteriorList, InteriorCard, InteriorImage, InteriorInfo, LikeButton, HeartIcon, LikeIcon} from '../styles/InteriorStyles';
 
 
 
@@ -61,45 +62,45 @@ const Interior = () => {
         <div>
             <InteriorSlide />
             <InteriorTab />
-            <InteriorContainer>
-                <InteriorHeader className="interior-header" >
+            <div className='Interior'>
+                <div className="interior-header" >
                     <div className="title">
-                        <Title>Interior</Title>
+                        <h2>Interior</h2>
                     </div>
-                    <CategoryList className="category">
-                        <CategoryItem 
+                    <ul className="category">
+                        <li 
                         className={activeTab === 'all' ? 'active' : ''}
-                        onClick={() => handleTabClick('all')}>ALL</CategoryItem>
-                        <CategoryItem 
+                        onClick={() => handleTabClick('all')}>ALL</li>
+                        <li 
                         className={activeTab === 'low-price' ? 'active' : ''}
-                        onClick={() => handleTabClick('low-price')}>LOW PRICE</CategoryItem>
-                        <CategoryItem 
+                        onClick={() => handleTabClick('low-price')}>LOW PRICE</li>
+                        <li 
                         className={activeTab === 'high-price' ? 'active' : ''}
-                        onClick={() => handleTabClick('high-price')}>HIGH PRICE</CategoryItem>
-                    </CategoryList>
-                </InteriorHeader>
-                <InteriorList className="interior-list">
+                        onClick={() => handleTabClick('high-price')}>HIGH PRICE</li>
+                    </ul>
+                </div>
+                <div className="interior-list">
                     {sortedProducts.slice(0, visibleProducts).map(product => (
-                        <InteriorCard className="interior-card" key={product.id}>
-                            <InteriorImage className="interiorkitchen-img">
+                        <div className="interior-card" key={product.id}>
+                            <div className="interior-img">
                                 <img src={product.imageUrl} alt={product.title} />
-                            </InteriorImage>
-                            <InteriorInfo className="interior-info">
+                            </div>
+                            <div className="interior-info">
                                 <span className="info-title">{product.title}</span>
                                 <span className="info-price">{product.price}원</span>
-                            </InteriorInfo>
+                            </div>
                             <div className='interior-btn'>
-                                <LikeButton className='interior-cart' onClick={() => toggleLike(product.id)}>
+                                <button className='interior-cart' onClick={() => toggleLike(product.id)}>
                                     CART 
                                     <span className={likedProducts.includes(product.id) ? "like-icon" : "heart-icon"}>
-                                        {likedProducts.includes(product.id) ? <HeartIcon/> : <LikeIcon/>}
+                                        {likedProducts.includes(product.id) ? <AiTwotoneHeart/> : <AiOutlineHeart/>}
                                     </span>
-                                </LikeButton>
+                                </button>
                             </div>
-                        </InteriorCard>
+                        </div>
                     ))}
-                </InteriorList>
-            </InteriorContainer>
+                </div>
+            </div>
         </div>
     );
 };

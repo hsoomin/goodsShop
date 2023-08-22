@@ -50,8 +50,6 @@
                 flex-direction: column;
                 justify-content: space-between;
                 gap: 1rem;
-                .info-title{}
-                .info-price{}
             }
             .fabric-btn{
                 display: flex;
@@ -88,5 +86,79 @@
                 }
             }
         }    
+    }
+}
+
+
+
+@mixin mq($screen-width) {
+    @if $screen-width=='large-screen'{
+        @media screen and (max-width:1440px) {
+            @content;
+        }
+    }
+    @if $screen-width=='middle-screen'{
+        @media screen and (max-width:1023px) {
+            @content;
+        }
+    }
+    @if $screen-width=='small-screen'{
+        @media screen and (max-width:768px) {
+            @content;
+        }
+    }
+    @if $screen-width=='xsmall-screen'{
+        @media screen and (max-width:360px) {
+            @content;
+        }
+    }
+}
+
+@include mq('large-screen'){
+    .Fabric{
+        .fabric-list{
+            gap: 0;
+        }
+    }
+}
+
+@include mq('middle-screen'){
+    .Fabric{
+        margin: 50px 0;
+        padding: 0 8rem;
+    }
+}
+
+@include mq('small-screen'){
+    .Fabric{
+        padding: 0 3rem;
+        .fabric-header{
+            .category{
+                flex-direction: column;
+                text-align: right;
+                font-size: 14px;
+                li{
+                    &:not(:first-child)::before{ 
+                        display:none
+                    }
+                }
+            }
+        }
+        .fabric-list{
+            .fabric-card{
+                width: 48%;
+            }    
+        }
+    }
+}
+
+@include mq('xsmall-screen'){
+    .Fabric{
+        padding: 0 2rem;
+        .fabric-list{
+            .fabric-card{
+                width: 100%;
+            }    
+        }
     }
 }

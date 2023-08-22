@@ -5,9 +5,9 @@
 }
 
 /* 스크롤바 */
-::-webkit-scrollbar{width: 7px;}
-::-webkit-scrollbar-track{background: #112B23}
-::-webkit-scrollbar-thumb{background:lavender; border-radius: 10px;}
+::-webkit-scrollbar{width: 6px;}
+::-webkit-scrollbar-track{background: #333}
+::-webkit-scrollbar-thumb{background:lavender;}
 
 body {
   margin: 0;

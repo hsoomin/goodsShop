@@ -29,7 +29,7 @@ const HorizontalScrollBar = () => {
 
   return (
     <div id="VerticalScrollBar" scrollPercentage={scrollPercentage} style={{
-      position:"fixed", top:"0", left:"0", width:"100%", height:'5px', backgroundColor:'#444', color:'white', overflow:'hidden', zIndex:'10000000'
+      position:"fixed", top:"0", left:"0", width:"100%", height:'5px', backgroundColor:'#333', color:'white', overflow:'hidden', zIndex:'10000000'
     }}>
         <div className="progress-bar" style={{ width: barWidth, height:'5px', backgroundColor:'lavender'}} />
     </div>

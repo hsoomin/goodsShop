@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import {Link, NavLink} from 'react-router-dom';
-// import './ToggleNav.scss' //app.scss
 import logo from '../img/logo.png';
 import { CgClose } from "react-icons/cg"; 
 import { AiOutlineMenu } from "react-icons/ai"; 
@@ -11,7 +10,7 @@ const ToggleNav = () => {
 
     //활성화 색깔
     const activeStyle={
-        color:'darkgreen'
+        color:'lightskyblue'
     }
 
     //메뉴 오픈 토글

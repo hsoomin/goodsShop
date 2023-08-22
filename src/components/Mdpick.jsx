@@ -5,10 +5,7 @@ import Aos from "aos";
 const Mdpick = () => {
 
     useEffect(()=> {
-        Aos.init({
-            duration: 2000, 
-            delay: 100,     
-        });
+        Aos.init({ });
     },[]);
 
 
@@ -17,6 +14,8 @@ const Mdpick = () => {
         className='mdpick'  
         data-aos="fade-up"
         data-aos-anchor-placement="top-bottom"
+        data-aos-duration="1000"
+        data-aos-delay="200"
         >
             <h2>BEST ITEM</h2>
             <div className="mdList">

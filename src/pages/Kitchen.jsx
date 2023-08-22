@@ -1,10 +1,10 @@
 import React, { useState , useEffect} from 'react';
-// import './Fabric.scss';
+import './Kitchen.scss';
 import KitchenSlide from '../components/KitchenSlide';
 import KitchenTab from '../components/KitchenTab';
 import KitchenProducts from '../data/KitchenProducts.json';
-import { KitchenContainer, KitchenHeader, Title, CategoryList, CategoryItem, KitchenList, KitchenCard, KitchenImage, KitchenInfo, LikeButton, HeartIcon, LikeIcon} from '../styles/KitchenStyles';
-
+// import { KitchenContainer, KitchenHeader, Title, CategoryList, CategoryItem, KitchenList, KitchenCard, KitchenImage, KitchenInfo, LikeButton, HeartIcon, LikeIcon} from '../styles/KitchenStyles';
+import { AiOutlineHeart,AiTwotoneHeart } from "react-icons/ai"; 
 
 
 const Kitchen = () => {
@@ -61,45 +61,45 @@ const Kitchen = () => {
         <div>
             <KitchenSlide />
             <KitchenTab />
-            <KitchenContainer>
-                <KitchenHeader className="kitchen-header" >
+            <div className='Kitchen'>
+                <div className="kitchen-header" >
                     <div className="title">
-                        <Title>Kitchen</Title>
+                        <h2>Kitchen</h2>
                     </div>
-                    <CategoryList className="category">
-                        <CategoryItem 
+                    <ul className="category">
+                        <li 
                         className={activeTab === 'all' ? 'active' : ''}
-                        onClick={() => handleTabClick('all')}>ALL</CategoryItem>
-                        <CategoryItem 
+                        onClick={() => handleTabClick('all')}>ALL</li>
+                        <li 
                         className={activeTab === 'low-price' ? 'active' : ''}
-                        onClick={() => handleTabClick('low-price')}>LOW PRICE</CategoryItem>
-                        <CategoryItem 
+                        onClick={() => handleTabClick('low-price')}>LOW PRICE</li>
+                        <li 
                         className={activeTab === 'high-price' ? 'active' : ''}
-                        onClick={() => handleTabClick('high-price')}>HIGH PRICE</CategoryItem>
-                    </CategoryList>
-                </KitchenHeader>
-                <KitchenList className="kitchen-list">
+                        onClick={() => handleTabClick('high-price')}>HIGH PRICE</li>
+                    </ul>
+                </div>
+                <div className="kitchen-list">
                     {sortedProducts.slice(0, visibleProducts).map(product => (
-                        <KitchenCard className="kitchen-card" key={product.id}>
-                            <KitchenImage className="kitchen-img">
+                        <div className="kitchen-card" key={product.id}>
+                            <div className="kitchen-img">
                                 <img src={product.imageUrl} alt={product.title} />
-                            </KitchenImage>
-                            <KitchenInfo className="kitchen-info">
+                            </div>
+                            <div className="kitchen-info">
                                 <span className="info-title">{product.title}</span>
                                 <span className="info-price">{product.price}원</span>
-                            </KitchenInfo>
+                            </div>
                             <div className='kitchen-btn'>
-                                <LikeButton className='kitchen-cart' onClick={() => toggleLike(product.id)}>
+                                <button className='kitchen-cart' onClick={() => toggleLike(product.id)}>
                                     CART 
                                     <span className={likedProducts.includes(product.id) ? "like-icon" : "heart-icon"}>
-                                        {likedProducts.includes(product.id) ? <HeartIcon/> : <LikeIcon/>}
+                                        {likedProducts.includes(product.id) ? <AiTwotoneHeart/> : <AiOutlineHeart/>}
                                     </span>
-                                </LikeButton>
+                                </button>
                             </div>
-                        </KitchenCard>
+                        </div>
                     ))}
-                </KitchenList>
-            </KitchenContainer>
+                </div>
+            </div>
         </div>
     );
 };

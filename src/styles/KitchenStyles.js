@@ -39,7 +39,7 @@ export  const KitchenContainer = styled.div`
         padding: 0 8rem;
     `}
     ${MediaMixin.mobile`
-        padding: 0 5rem;
+        padding: 0 3rem;
     `}
     ${MediaMixin.phone`
         padding: 0 2rem;

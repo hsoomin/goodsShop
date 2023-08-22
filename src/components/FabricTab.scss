@@ -1,5 +1,5 @@
-.Tab{
-    width: 100%; 
+.FabricTab{
+    width: 100%;
     margin: 0 auto;
     margin-top: 100px;
     .tab-menu{
@@ -16,6 +16,8 @@
             background: rgb(255, 255, 255);
             color: #333;
             border-top: 1px solid rgb(212, 212, 212);
+            font-size: 18px;
+            font-family: 'Ysabeau SC';
             &.active{
                 background: rgb(48, 48, 51);
                 color: #fff;
@@ -28,13 +30,14 @@
         box-sizing: border-box;
         text-align: center;
         background: rgb(48, 48, 51);
+        color: #fff;
         display: flex;
         gap: 2rem;
         li{
+            width: 100%;
             display: flex;
             flex-direction: column;
-            gap: .5rem;
-            width: 100%;
+            justify-content: space-between;
             span{
                 color: #fff;
                 font-size: 16px;
@@ -43,10 +46,33 @@
                 width: 100%;
                 img{width: 100%;}
             }
-            .tab-name{
+            .tab-title{
+                margin-top: 20px;
+                font-size: 20px;
             }
-            .tab-price{}
         }
-        
     }
 }
+
+
+@mixin mq($screen-width) {
+    @if $screen-width=='small-screen'{
+        @media screen and (max-width:768px) {
+            @content;
+        }
+    }
+}
+
+@include mq('small-screen'){
+    .FabricTab{
+        .tabList{
+            padding: 40px;
+            flex-direction: column;
+            gap: 3rem;
+            li{
+                gap: .5rem;
+            }
+        }
+    }
+}
+

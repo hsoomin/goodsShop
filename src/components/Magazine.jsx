@@ -7,10 +7,7 @@ import Aos from "aos";
 const Magazine = () => {
 
     useEffect(()=> {
-        Aos.init({
-            duration: 2000, 
-            delay: 1000,     
-        });
+        Aos.init({});
     },[]);
 
 
@@ -18,6 +15,8 @@ const Magazine = () => {
         <div className='magazine'
         data-aos="fade-up"
         data-aos-anchor-placement="top-bottom"
+        data-aos-duration="1000"
+        data-aos-delay="500"
         >
             <div className="container">
                 <div className='magazine-title'>
