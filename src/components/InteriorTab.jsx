@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import InteriorProducts from '../data/InteriorProducts.json';
-import './FabricTab.scss';
+import './InteriorTab.scss';
 
 
 const InteriorTab = () => {

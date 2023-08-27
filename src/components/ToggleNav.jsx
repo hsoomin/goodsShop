@@ -10,7 +10,7 @@ const ToggleNav = () => {
 
     //활성화 색깔
     const activeStyle={
-        color:'lightskyblue'
+        color:'cadetblue'
     }
 
     //메뉴 오픈 토글
