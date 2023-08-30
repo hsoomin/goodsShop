@@ -1,0 +1,68 @@
+[
+    {
+        "id": 1,
+        "imageUrl": "/img/slide/in00.jpg",
+        "mobile_imageUrl":"/img/slide/in00_m.jpg",
+        "category":"interior"
+    },
+    {
+        "id": 2,
+        "imageUrl": "/img/slide/in01.jpg",
+        "mobile_imageUrl":"/img/slide/in01_m.jpg",
+        "category":"interior"
+    },
+    {
+        "id": 3,
+        "imageUrl": "/img/slide/in02.jpg",
+        "mobile_imageUrl":"/img/slide/in02_m.jpg",
+        "category":"interior"
+    },
+    {
+        "id": 4,
+        "imageUrl": "/img/slide/in03.jpg",
+        "mobile_imageUrl":"/img/slide/in03_m.jpg",
+        "category":"interior"
+    },
+    {
+        "id": 5,
+        "imageUrl": "/img/slide/fa01.jpg",
+        "mobile_imageUrl":"/img/slide/fa01_m.jpg",
+        "category":"fabric"
+    },
+    {
+        "id": 6,
+        "imageUrl": "/img/slide/fa02.jpg",
+        "mobile_imageUrl":"/img/slide/fa02_m.jpg",
+        "category":"fabric"
+    },
+    {
+        "id": 7,
+        "imageUrl": "/img/slide/fa03.jpg",
+        "mobile_imageUrl":"/img/slide/fa03_m.jpg",
+        "category":"fabric"
+    },
+    {
+        "id": 8,
+        "imageUrl": "/img/slide/ki01.jpg",
+        "mobile_imageUrl":"/img/slide/ki01_m.jpg",
+        "category":"kitchen"
+    },
+    {
+        "id": 9,
+        "imageUrl": "/img/slide/ki02.jpg",
+        "mobile_imageUrl":"/img/slide/ki02_m.jpg",
+        "category":"kitchen"
+    },
+    {
+        "id": 10,
+        "imageUrl": "/img/slide/ki03.jpg",
+        "mobile_imageUrl":"/img/slide/ki03_m.jpg",
+        "category":"kitchen"
+    },
+    {
+        "id": 11,
+        "imageUrl": "/img/slide/ki04.jpg",
+        "mobile_imageUrl":"/img/slide/ki04_m.jpg",
+        "category":"kitchen"
+    }
+]

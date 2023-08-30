@@ -4,7 +4,6 @@ import './Fabric.scss';
 import FabricSlide from '../components/FabricSlide';
 import FabricTab from '../components/FabricTab';
 import FabricProducts from '../data/FabricProducts.json';
-// import { FabricContainer, FabricHeader, Title, CategoryList, CategoryItem, FabricList, FabricCard, FabricImage, FabricInfo, LikeButton, HeartIcon, LikeIcon} from '../styles/FabricStyles';
 
 
 
@@ -63,8 +62,8 @@ const Fabric = () => {
         <div>
             <FabricSlide />
             <FabricTab />
-            <div className="Fabric">
-                <div className="fabric-header" >
+            <div className="tab">
+                <div className="header" >
                     <div className="title">
                         <h2>Fabric</h2>
                     </div>
@@ -80,18 +79,18 @@ const Fabric = () => {
                         onClick={() => handleTabClick('high-price')}>HIGH PRICE</li>
                     </ul>
                 </div>
-                <div className="fabric-list">
+                <div className="list">
                     {sortedProducts.slice(0, visibleProducts).map(product => (
-                        <div className="fabric-card" key={product.id}>
-                            <div className="fabric-img">
+                        <div className="card" key={product.id}>
+                            <div className="card-img">
                                 <img src={product.imageUrl} alt={product.title} />
                             </div>
-                            <div className="fabric-info">
+                            <div className="card-info">
                                 <span className="info-title">{product.title}</span>
                                 <span className="info-price">{product.price}원</span>
                             </div>
-                            <div className='fabric-btn'>
-                                <button className='fabric-cart' onClick={() => toggleLike(product.id)}>
+                            <div className='card-btn'>
+                                <button className='cart' onClick={() => toggleLike(product.id)}>
                                     CART 
                                     <span className={likedProducts.includes(product.id) ? "like-icon" : "heart-icon"}>
                                         {likedProducts.includes(product.id) ? <AiTwotoneHeart/> : <AiOutlineHeart/>}

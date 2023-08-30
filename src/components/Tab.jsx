@@ -1,11 +1,12 @@
 import React, { useState } from 'react';
-import InteriorProducts from '../data/InteriorProducts.json';
+// import InteriorProducts from '../data/InteriorProducts.json';
 import './InteriorTab.scss';
+import Products from '../data/ProductData.json';
 
 
 const InteriorTab = () => {
     const [activeTab, setActiveTab] = useState('new');
-    const filteredProducts = InteriorProducts.filter(
+    const filteredProducts = Products.filter(
         (product) => product.category === activeTab
     );
 

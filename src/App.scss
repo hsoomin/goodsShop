@@ -357,22 +357,6 @@ a{text-decoration: none; color: #333;}
             margin: 0 auto;
             padding: 0 2rem;
             box-sizing: border-box;
-            .magazine-title{
-                h2{
-                    position: relative;
-                    z-index: 1;
-                    &:after{
-                        content: "";
-                        height: 10px;
-                        width: 111px;
-                        position: absolute;
-                        top: 18px;
-                        left: -3px;
-                        background: greenyellow;
-                        z-index: -1;
-                    }
-                }
-            }
             .magazineList{
                 position: relative;
                 height: 608px;

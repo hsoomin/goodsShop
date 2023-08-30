@@ -56,6 +56,7 @@ const ToggleNav = () => {
                             <li><NavLink to="/interior" style={({isActive})=>(isActive ? activeStyle:undefined)}>Interior</NavLink></li>
                             <li><NavLink to="/kitchen" style={({isActive})=>(isActive ? activeStyle:undefined)}>Kitchen</NavLink></li>
                             <li><NavLink to="/fabric" style={({isActive})=>(isActive ? activeStyle:undefined)}>Fabric</NavLink></li>
+                            <li><NavLink to="/fabric2" style={({isActive})=>(isActive ? activeStyle:undefined)}>Fabric2</NavLink></li>  {/* 수정중 */}
                             <li><NavLink to="/event" style={({isActive})=>(isActive ? activeStyle:undefined)}>Event</NavLink></li>
                         </ul>
                     </div>
