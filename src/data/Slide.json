@@ -9,31 +9,41 @@
         "id": 2,
         "imageUrl": "/img/slide/in01.jpg",
         "mobile_imageUrl":"/img/slide/in01_m.jpg",
-        "category":"interior"
+        "category":"interior",
+        "title":"일하는 이들을 위해",
+        "subTitle":"RARERAW"
     },
     {
         "id": 3,
         "imageUrl": "/img/slide/in02.jpg",
         "mobile_imageUrl":"/img/slide/in02_m.jpg",
-        "category":"interior"
+        "category":"interior",
+        "title":"고요한 빛",
+        "subTitle":"LUMIR"
     },
     {
         "id": 4,
         "imageUrl": "/img/slide/in03.jpg",
         "mobile_imageUrl":"/img/slide/in03_m.jpg",
-        "category":"interior"
+        "category":"interior",
+        "title":"디자이너 가구 모음",
+        "subTitle":"BRAND HIGHLIGH"
     },
     {
         "id": 5,
         "imageUrl": "/img/slide/fa01.jpg",
         "mobile_imageUrl":"/img/slide/fa01_m.jpg",
-        "category":"fabric"
+        "category":"fabric",
+        "title":"욕실에 더하는 취향",
+        "subTitle":"#BATH ITEM"
     },
     {
         "id": 6,
         "imageUrl": "/img/slide/fa02.jpg",
         "mobile_imageUrl":"/img/slide/fa02_m.jpg",
-        "category":"fabric"
+        "category":"fabric",
+        "title":"오늘의 패턴",
+        "subTitle":"RITTEN"
     },
     {
         "id": 7,
@@ -51,18 +61,24 @@
         "id": 9,
         "imageUrl": "/img/slide/ki02.jpg",
         "mobile_imageUrl":"/img/slide/ki02_m.jpg",
-        "category":"kitchen"
+        "category":"kitchen",
+        "title":"백지 위 맑고 흰 빛",
+        "subTitle":"WHITEBLOOM"
     },
     {
         "id": 10,
         "imageUrl": "/img/slide/ki03.jpg",
         "mobile_imageUrl":"/img/slide/ki03_m.jpg",
-        "category":"kitchen"
+        "category":"kitchen",
+        "title":"주말을 더 특별하게",
+        "subTitle":"MOMUR WEEKEND"
     },
     {
         "id": 11,
         "imageUrl": "/img/slide/ki04.jpg",
         "mobile_imageUrl":"/img/slide/ki04_m.jpg",
-        "category":"kitchen"
+        "category":"kitchen",
+        "title":"루밍과 준비하는 가을",
+        "subTitle":"ROOMING"
     }
 ]

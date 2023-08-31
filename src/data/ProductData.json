@@ -4,7 +4,7 @@
         "imageUrl": "/img/interior/in01.jpg",
         "title": "스피아노 망고 푸딩 단스탠드 SS-5900S",
         "price": "61,900",
-        "category":"new",
+        "category":"new_interior",
         "sort":"interior"
         
     },
@@ -13,7 +13,7 @@
         "imageUrl": "img/interior/in02.png",
         "title": "뽀글이 개구리 인형",
         "price": "23,800",
-        "category":"new",
+        "category":"new_interior",
         "sort":"interior"
     },
     {
@@ -21,7 +21,7 @@
         "imageUrl": "img/interior/in03.jpg",
         "title": " 괴마옥 선인장 미니화분",
         "price": "22,000",
-        "category":"new",
+        "category":"new_interior",
         "sort":"interior"
     },
     {
@@ -29,7 +29,7 @@
         "imageUrl": "img/interior/in04.jpg",
         "title": "플러피 타임 클락 1'11'",
         "price": "69,000",
-        "category":"new",
+        "category":"new_interior",
         "sort":"interior"
     },
     {
@@ -37,7 +37,7 @@
         "imageUrl": "img/interior/in05.png",
         "title": "PUFFY BED BOOK (sky/black)",
         "price": "49,000",
-        "category":"new",
+        "category":"new_interior",
         "sort":"interior"
     },
     {
@@ -66,7 +66,7 @@
         "imageUrl": "img/interior/in09.jpg",
         "title": " 힌｜페블 플레이트 M · 스톤 화이트",
         "price": "38,000",
-        "category":"weekly",
+        "category":"weekly_interior",
         "sort":"interior"
     },
     {
@@ -74,7 +74,7 @@
         "imageUrl": "img/interior/in10.jpg",
         "title": "루미르R 포터블 램프 - 크롬 무선 조명",
         "price": "165,000",
-        "category":"weekly",
+        "category":"weekly_interior",
         "sort":"interior"
     },
     { 
@@ -82,7 +82,7 @@
         "imageUrl": "img/interior/in11.jpg",
         "title": "[HAY] Tint Wine Glass Set, Pink & Yellow (541224)",
         "price": "67,000",
-        "category":"weekly",
+        "category":"weekly_interior",
         "sort":"interior"
     },
     {
@@ -90,7 +90,7 @@
         "imageUrl": "img/interior/in12.jpg",
         "title": "Quater chair (12 colors)",
         "price": "530,000",
-        "category":"weekly",
+        "category":"weekly_interior",
         "sort":"interior"
     },
     {
@@ -112,7 +112,7 @@
         "imageUrl": "img/interior/in15.jpg",
         "title": "[HAY] Analog Wall Clock, 2 colors",
         "price": "159,000",
-        "category":"weekly",
+        "category":"weekly_interior",
         "sort":"interior"
     },
     {
@@ -211,7 +211,7 @@
         "imageUrl": "img/kitchen/ki02.jpg",
         "title": "오븐 사용 가능한 스텐 웨이브 트레이 [뚜껑+트레이] 2종세트",
         "price": "15,900",
-        "category":"new",
+        "category":"new_kitchen",
         "sort":"kitchen"
     },
     {
@@ -219,7 +219,7 @@
         "imageUrl": "img/kitchen/ki03.jpg",
         "title": "에델 실리콘 조리도구 라이트 7종세트",
         "price": "32,900",
-        "category":"new",
+        "category":"new_kitchen",
         "sort":"kitchen"
     },
     {
@@ -227,7 +227,7 @@
         "imageUrl": "img/kitchen/ki04.jpg",
         "title": "스텐 원형 메쉬 트레이 [채반+트레이] 3종세트 소/대/특대'",
         "price": "22,000",
-        "category":"new",
+        "category":"new_kitchen",
         "sort":"kitchen"
     },
     {
@@ -242,7 +242,7 @@
         "imageUrl": "img/kitchen/ki06.jpg",
         "title": "펠로우 스태그 EKG 전기 드립포트 900ml - 블랙",
         "price": "312,000",
-        "category":"new",
+        "category":"new_kitchen",
         "sort":"kitchen"
     },
     {
@@ -264,7 +264,7 @@
         "imageUrl": "img/kitchen/ki09.jpg",
         "title": " 커브형 내열 유리빨대 컬러 5종",
         "price": "1,000",
-        "category":"weekly",
+        "category":"weekly_kitchen",
         "sort":"kitchen"
     },
     {
@@ -279,7 +279,7 @@
         "imageUrl": "img/kitchen/ki11.jpg",
         "title": "소일 _ 작은접시, 앞접시 (4colors)",
         "price": "27,000",
-        "category":"weekly",
+        "category":"weekly_kitchen",
         "sort":"kitchen"
     },
     {
@@ -329,7 +329,7 @@
         "imageUrl": "img/kitchen/ki18.jpg",
         "title": "뉴달주병세트_백야/청야 (2colors)",
         "price": "65,000",
-        "category":"new",
+        "category":"new_kitchen",
         "sort":"kitchen"
     },
     {
@@ -372,7 +372,7 @@
         "imageUrl": "img/kitchen/ki24.jpg",
         "title": "황동 골드 메탈 오프너 병따개",
         "price": "25,000",
-        "category":"weekly",
+        "category":"weekly_kitchen",
         "sort":"kitchen"
     },
     {
@@ -380,7 +380,7 @@
         "imageUrl": "img/kitchen/ki25.jpg",
         "title": "피카 IH(인덕션) 프라이팬 24cm",
         "price": "42,000",
-        "category":"weekly",
+        "category":"weekly_kitchen",
         "sort":"kitchen"
     },
     {
@@ -388,7 +388,7 @@
         "imageUrl": "img/kitchen/ki26.jpg",
         "title": "헤리티지 목단 현玄 커피잔 2조 세트 (4p)",
         "price": "560,000",
-        "category":"weekly",
+        "category":"weekly_kitchen",
         "sort":"kitchen"
     },
     {
@@ -396,7 +396,7 @@
         "imageUrl": "/img/fabric/fa01.jpg",
         "title": "패턴 양면 4중 거즈 블랭킷-핑크/블루",
         "price": "39,000",
-        "category":"weekly",
+        "category":"weekly_fabric",
         "sort":"fabric"
     },
     {
@@ -404,7 +404,7 @@
         "imageUrl": "img/fabric/fa02.jpg",
         "title": "(uni)그라운드 로브 그린스트라이프 w/ Village pkg",
         "price": "55,000",
-        "category":"new",
+        "category":"new_fabric",
         "sort":"fabric"
     },
     {
@@ -433,7 +433,7 @@
         "imageUrl": "img/fabric/fa06.jpg",
         "title": "bookaz 게으른 뚱보토끼 토둥이 필로우 인형 귀여운 동물 쿠션 집들이 선물",
         "price": "26,800",
-        "category":"weekly",
+        "category":"weekly_fabric",
         "sort":"fabric"
     },
     {
@@ -441,7 +441,7 @@
         "imageUrl": "img/fabric/fa07.jpg",
         "title": "마레 온도조절 사계절 차렵이불",
         "price": "132,250",
-        "category":"weekly",
+        "category":"weekly_fabric",
         "sort":"fabric"
     },
     {
@@ -449,7 +449,7 @@
         "imageUrl": "img/fabric/fa08.jpg",
         "title": " big waves duvet cover - mint",
         "price": "300,000",
-        "category":"new",
+        "category":"new_fabric",
         "sort":"fabric"
     },
     {
@@ -457,7 +457,7 @@
         "imageUrl": "img/fabric/fa09.jpg",
         "title": "베베클래식 알러지케어 다운필 키즈 베개솜(40X60)",
         "price": "33,200",
-        "category":"new",
+        "category":"new_fabric",
         "sort":"fabric"
     },
     {
@@ -479,7 +479,7 @@
         "imageUrl": "img/fabric/fa12.jpg",
         "title": "[멜로우린넨 커튼_white",
         "price": "78,000",
-        "category":"weekly",
+        "category":"weekly_fabric",
         "sort":"fabric"
     },
     {
@@ -501,7 +501,7 @@
         "imageUrl": "img/fabric/fa15.jpg",
         "title": "먼지없는 알러지케어 원형방석 식탁 의자방석 커버 4colors",
         "price": "19,000",
-        "category":"new",
+        "category":"new_fabric",
         "sort":"fabric"
     },
     {
@@ -530,7 +530,7 @@
         "imageUrl": "img/fabric/fa19.jpg",
         "title": "파라다이스 스트라이프 홑겹이불",
         "price": "42,000",
-        "category":"new",
+        "category":"new_fabric",
         "sort":"fabric"
     },
     {
@@ -559,7 +559,7 @@
         "imageUrl": "img/fabric/fa23.jpg",
         "title": "HANDKERCHIEF SET (IVORY)",
         "price": "15,000",
-        "category":"weekly",
+        "category":"weekly_fabric",
         "sort":"fabric"
     },
     {

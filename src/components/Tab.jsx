@@ -1,34 +1,30 @@
 import React, { useState } from 'react';
-// import InteriorProducts from '../data/InteriorProducts.json';
-import './InteriorTab.scss';
-import Products from '../data/ProductData.json';
+import PropTypes from 'prop-types';
+import './Tab.scss';
 
-
-const InteriorTab = () => {
-    const [activeTab, setActiveTab] = useState('new');
-    const filteredProducts = Products.filter(
-        (product) => product.category === activeTab
-    );
+const Tab = ({ tabs, tabData }) => {
+    const [activeTab, setActiveTab] = useState(tabs[0].value);
 
     const handleTabClick = (tab) => {
         setActiveTab(tab);
     };
 
+    const filteredProducts = tabData.filter(
+        (product) => product.category === activeTab
+    );
+
     return (
-        <div className="InteriorTab">
+        <div className="Tab">
             <div className="tab-menu">
-                <button
-                    onClick={() => handleTabClick('new')}
-                    className={activeTab === 'new' ? 'active' : ''}
-                >
-                    New arrivals
-                </button>
-                <button
-                    onClick={() => handleTabClick('weekly')}
-                    className={activeTab === 'weekly' ? 'active' : ''}
-                >
-                    Weekly best
-                </button>
+                {tabs.map((tab) => (
+                    <button
+                        key={tab.value}
+                        onClick={() => handleTabClick(tab.value)}
+                        className={activeTab === tab.value ? 'active' : ''}
+                    >
+                        {tab.label}
+                    </button>
+                ))}
             </div>
             <div className="tabList">
                 {filteredProducts.map((product) => (
@@ -45,4 +41,14 @@ const InteriorTab = () => {
     );
 };
 
-export default InteriorTab;
+Tab.propTypes = {
+    tabs: PropTypes.arrayOf(
+        PropTypes.shape({
+            label: PropTypes.string.isRequired,
+            value: PropTypes.string.isRequired,
+        })
+    ).isRequired,
+    tabData: PropTypes.array.isRequired,
+};
+
+export default Tab;

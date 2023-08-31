@@ -1,10 +1,10 @@
-.Kitchen{
+.List{
     position: relative;
     width: 100%;
     margin: 100px 0;
     padding: 0 15rem;
     box-sizing: border-box;
-    .kitchen-header{
+    .product-header{
         display: flex;
         justify-content: space-between;
         align-items: flex-end;
@@ -12,7 +12,7 @@
         .title{
             h2{font-size: 40px;}
         }
-        .category{
+        .product-category{
             display: flex;
             cursor: pointer;
             li{
@@ -28,32 +28,32 @@
             }
         }
     }
-    .kitchen-list{
+    .product-list{
         display: flex;
         width: 100%;
         gap: 2rem 1rem;
         flex-wrap: wrap; 
         justify-content: space-between;
         margin-top: 30px;
-        .kitchen-card{
+        .product-card{
             display: flex;
             flex-direction: column;
             justify-content: space-between;
             gap: 1rem;
             width: 32%;
             margin-bottom: 20px;
-            .kitchen-img{
+            .product-img{
                 img{width: 100%;}
             }
-            .kitchen-info{
+            .product-info{
                 display: flex;
                 flex-direction: column;
                 justify-content: space-between;
                 gap: 1rem;
             }
-            .kitchen-btn{
+            .product-btn{
                 display: flex;
-                .kitchen-cart{
+                .cart{
                     width: 100%;
                     border: none;
                     background: #e7e6e4;
@@ -115,24 +115,24 @@
 }
 
 @include mq('large-screen'){
-    .Kitchen{
-        .kitchen-list{
+    .Fabric{
+        .fabric-list{
             gap: 0;
         }
     }
 }
 
 @include mq('middle-screen'){
-    .Kitchen{
+    .Fabric{
         margin: 50px 0;
         padding: 0 8rem;
     }
 }
 
 @include mq('small-screen'){
-    .Kitchen{
+    .Fabric{
         padding: 0 3rem;
-        .kitchen-header{
+        .fabric-header{
             .category{
                 flex-direction: column;
                 text-align: right;
@@ -144,8 +144,8 @@
                 }
             }
         }
-        .kitchen-list{
-            .kitchen-card{
+        .fabric-list{
+            .fabric-card{
                 width: 48%;
             }    
         }
@@ -153,10 +153,10 @@
 }
 
 @include mq('xsmall-screen'){
-    .Kitchen{
+    .Fabric{
         padding: 0 2rem;
-        .kitchen-list{
-            .kitchen-card{
+        .fabric-list{
+            .fabric-card{
                 width: 100%;
             }    
         }

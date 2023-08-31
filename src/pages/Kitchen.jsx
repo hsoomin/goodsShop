@@ -1,110 +1,50 @@
-import React, { useState , useEffect} from 'react';
-import './Kitchen.scss';
-import KitchenSlide from '../components/KitchenSlide';
-import KitchenTab from '../components/KitchenTab';
-import KitchenProducts from '../data/KitchenProducts.json';
-// import { KitchenContainer, KitchenHeader, Title, CategoryList, CategoryItem, KitchenList, KitchenCard, KitchenImage, KitchenInfo, LikeButton, HeartIcon, LikeIcon} from '../styles/KitchenStyles';
-import { AiOutlineHeart,AiTwotoneHeart } from "react-icons/ai"; 
+import React,{useState} from 'react';
+import Slide from '../components/Slide';
+import Tab from '../components/Tab';
+import List from '../components/List'; 
+import ProductData from '../data/ProductData.json';
+import SlideData from '../data/Slide.json';
 
 
 const Kitchen = () => {
     
-    const productsPerPage = 6; // 처음에 보이는 6개
-    const [visibleProducts, setVisibleProducts] = useState(productsPerPage);
+    const kitchenSlides = SlideData.filter(slide => slide.category === "kitchen");
+    const kitchenProducts = ProductData.filter(
+        (product) =>
+            product.category === 'new_kitchen' || product.category === 'weekly_kitchen'
+    );
+    // Define tab labels and values
+    const tabLabels = [
+        { label: 'New arrivals', value: 'new_kitchen' },
+        { label: 'Weekly best', value: 'weekly_kitchen' },
+    ];
 
-    useEffect(() => {
-        const handleScroll = () => {
-            if (window.innerHeight + window.scrollY >= document.body.offsetHeight - 200 ) {
-                setVisibleProducts(prevVisibleProducts => prevVisibleProducts + productsPerPage);
-            }
-        };
-        window.addEventListener('scroll', handleScroll);
+    const kitchenList = ProductData.filter(product => product.sort === "kitchen");
+    //가격 정렬
+    const [sortedKitchenList, setSortedKitchenList] = useState([...kitchenList]);
 
-        return () => {
-            window.removeEventListener('scroll', handleScroll);
-        };
-    }, []);
-
-
-    //하트 토글
-    const [likedProducts, setLikedProducts] = useState([]);
-    const toggleLike = (productId) => {
-        if (likedProducts.includes(productId)) {
-            setLikedProducts(likedProducts.filter(id => id !== productId));
+    const handleSortClick = (sortType) => {
+        if (sortType === 'low-price') {
+            const sortedByLowPrice = [...kitchenList].sort((a, b) => parseFloat(a.price) - parseFloat(b.price));
+            setSortedKitchenList(sortedByLowPrice);
+        } else if (sortType === 'high-price') {
+            const sortedByHighPrice = [...kitchenList].sort((a, b) => parseFloat(b.price) - parseFloat(a.price));
+            setSortedKitchenList(sortedByHighPrice);
         } else {
-            setLikedProducts([...likedProducts, productId]);
+            setSortedKitchenList([...kitchenList]);
         }
     };
-
-
-    const [activeTab, setActiveTab] = useState('new');
-    //오름차순, 내림차순
-    const [sortedProducts, setSortedProducts] = useState([...KitchenProducts]);
-    //가격에서 , 빼기
-    const removeCommas = (price) => {
-        return price.replace(/,/g, '');
-    };
-    //
-    const handleTabClick = (tab) => {
-        setActiveTab(tab);
-
-        if (tab === 'low-price') {
-            setSortedProducts([...KitchenProducts].sort((a, b) => parseFloat(removeCommas(a.price)) - parseFloat(removeCommas(b.price))));
-        } else if (tab === 'high-price') {
-            setSortedProducts([...KitchenProducts].sort((a, b) => parseFloat(removeCommas(b.price)) - parseFloat(removeCommas(a.price))));
-        } else {
-            setSortedProducts([...KitchenProducts]);
-        }
-    };
+    
 
     return (
         <div>
-            <KitchenSlide />
-            <KitchenTab />
-            <div className='Kitchen'>
-                <div className="kitchen-header" >
-                    <div className="title">
-                        <h2>Kitchen</h2>
-                    </div>
-                    <ul className="category">
-                        <li 
-                        className={activeTab === 'all' ? 'active' : ''}
-                        onClick={() => handleTabClick('all')}>ALL</li>
-                        <li 
-                        className={activeTab === 'low-price' ? 'active' : ''}
-                        onClick={() => handleTabClick('low-price')}>LOW PRICE</li>
-                        <li 
-                        className={activeTab === 'high-price' ? 'active' : ''}
-                        onClick={() => handleTabClick('high-price')}>HIGH PRICE</li>
-                    </ul>
-                </div>
-                <div className="kitchen-list">
-                    {sortedProducts.slice(0, visibleProducts).map(product => (
-                        <div className="kitchen-card" key={product.id}>
-                            <div className="kitchen-img">
-                                <img src={product.imageUrl} alt={product.title} />
-                            </div>
-                            <div className="kitchen-info">
-                                <span className="info-title">{product.title}</span>
-                                <span className="info-price">{product.price}원</span>
-                            </div>
-                            <div className='kitchen-btn'>
-                                <button className='kitchen-cart' onClick={() => toggleLike(product.id)}>
-                                    CART 
-                                    <span className={likedProducts.includes(product.id) ? "like-icon" : "heart-icon"}>
-                                        {likedProducts.includes(product.id) ? <AiTwotoneHeart/> : <AiOutlineHeart/>}
-                                    </span>
-                                </button>
-                            </div>
-                        </div>
-                    ))}
-                </div>
-            </div>
+            <Slide slideData={kitchenSlides} />
+            <Tab tabs={tabLabels} tabData={kitchenProducts} />
+            <List products={sortedKitchenList} onSortClick={handleSortClick} />
         </div>
     );
 };
 
 export default Kitchen;
-
 
 

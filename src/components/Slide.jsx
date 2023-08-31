@@ -1,9 +1,10 @@
 import React from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay, Pagination, Navigation } from 'swiper/modules';
-import SlideData from '../data/Slide.json'; 
+import PropTypes from 'prop-types';
+import "./Slide.scss";
 
-const Slide = () => {
+const Slide = ({ slideData }) => {
     return (
         <div className='Slide'>
             <Swiper
@@ -25,19 +26,24 @@ const Slide = () => {
                     "--swiper-navigation-color": "#666",
                 }}
             >
-                {SlideData.map((slide) => (
+                {slideData.map((slide) => (
                     <SwiperSlide key={slide.id} className='SwiperSlide'>
                         <img src={process.env.PUBLIC_URL + slide.imageUrl} className='mainImg' alt={`이미지${slide.id}`} />
                         <img src={process.env.PUBLIC_URL + slide.mobile_imageUrl} className='mobileImg' alt={`이미지${slide.id}`} />
                         <div className="textBox">
                             <h4>{slide.title}</h4>
-                            <p>{slide.subtitle}</p>
+                            <p>{slide.subTitle}</p>
                         </div>
                     </SwiperSlide>
                 ))}
             </Swiper>
         </div>
     );
+};
+
+// Define PropTypes for slideData prop
+Slide.propTypes = {
+    slideData: PropTypes.array.isRequired,
 };
 
 export default Slide;
