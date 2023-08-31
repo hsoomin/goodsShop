@@ -1,7 +1,6 @@
 import React, {useEffect} from 'react';
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay } from 'swiper/modules';
-// import { Link } from "react-router-dom";
 import Aos from "aos";
 
 const Magazine = () => {
@@ -9,7 +8,6 @@ const Magazine = () => {
     useEffect(()=> {
         Aos.init({});
     },[]);
-
 
     return (
         <div className='magazine'

@@ -42,8 +42,8 @@
         "imageUrl": "/img/slide/fa02.jpg",
         "mobile_imageUrl":"/img/slide/fa02_m.jpg",
         "category":"fabric",
-        "title":"오늘의 패턴",
-        "subTitle":"RITTEN"
+        "title":"여행과 어울리는",
+        "subTitle":"VILLA PHARMACY"
     },
     {
         "id": 7,
@@ -70,15 +70,15 @@
         "imageUrl": "/img/slide/ki03.jpg",
         "mobile_imageUrl":"/img/slide/ki03_m.jpg",
         "category":"kitchen",
-        "title":"주말을 더 특별하게",
-        "subTitle":"MOMUR WEEKEND"
+        "title":"눈이 먼저 반응하는",
+        "subTitle":"#KICHEN ITEM"
     },
     {
         "id": 11,
         "imageUrl": "/img/slide/ki04.jpg",
         "mobile_imageUrl":"/img/slide/ki04_m.jpg",
         "category":"kitchen",
-        "title":"루밍과 준비하는 가을",
-        "subTitle":"ROOMING"
+        "title":"텀블러에 담은 취향",
+        "subTitle":"LOCKnLOCK"
     }
 ]

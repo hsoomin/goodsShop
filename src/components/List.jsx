@@ -58,7 +58,6 @@ const List = ({products}) => {
         setSortedProducts(sortedProductsCopy);
     };
 
-
     return (
         <div className='List'>
             <div className='product-header'>
@@ -67,20 +66,20 @@ const List = ({products}) => {
                 </div>
                 <ul className='product-category'>
                     <li
-                        className={activeTab === 'all' ? 'active' : ''}
-                        onClick={() => handleTabClick('all')}
+                    className={activeTab === 'all' ? 'active' : ''}
+                    onClick={() => handleTabClick('all')}
                     >
                         ALL
                     </li>
                     <li
-                        className={activeTab === 'low-price' ? 'active' : ''}
-                        onClick={() => handleTabClick('low-price')}
+                    className={activeTab === 'low-price' ? 'active' : ''}
+                    onClick={() => handleTabClick('low-price')}
                     >
                         LOW PRICE
                     </li>
                     <li
-                        className={activeTab === 'high-price' ? 'active' : ''}
-                        onClick={() => handleTabClick('high-price')}
+                    className={activeTab === 'high-price' ? 'active' : ''}
+                    onClick={() => handleTabClick('high-price')}
                     >
                         HIGH PRICE
                     </li>
@@ -112,4 +111,3 @@ const List = ({products}) => {
 };
 
 export default List;
-

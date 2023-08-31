@@ -1,11 +1,12 @@
-import { AiOutlineHeart } from "react-icons/ai"; 
-import React,{useEffect,useState} from 'react';
+import React, {useEffect,useState} from 'react';
 import { useParams,  useNavigate } from 'react-router-dom';
-import axios from 'axios';
+import { AiOutlineHeart } from "react-icons/ai"; 
 import { Button, message } from 'antd';
-import "./ProductPage.scss";
 import { API_URL} from "../config/constants";
+import "./ProductPage.scss";
+import axios from 'axios';
 import dayjs from "dayjs";
+
 
 const ProductPage = () => {
     const {id}=useParams();
@@ -15,7 +16,7 @@ const ProductPage = () => {
         axios.get(`${API_URL}/products/${id}`)
         .then((result)=>{
             setProduct(result.data.product)
-           /*  console.log(result) */
+            // console.log(result)
         })
         .catch((error)=>{
             console.log(error)
@@ -25,7 +26,6 @@ const ProductPage = () => {
     useEffect(()=>{
         getProduct();
     },[])
-
 
     const onClickPurchase=()=>{
         axios.post(`${API_URL}/purchase/${id}`)

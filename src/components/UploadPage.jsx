@@ -1,10 +1,10 @@
-import { AiOutlineCamera } from "react-icons/ai"; 
 import React, { useState } from 'react';
-import { Button, InputNumber, Divider, Form, Input, Upload, message} from 'antd';
-import "./UploadPage.scss"
-import { API_URL } from "../config/constants";
 import {useNavigate} from 'react-router-dom'
 import axios from "axios";
+import { API_URL } from "../config/constants";
+import "./UploadPage.scss"
+import { Button, InputNumber, Divider, Form, Input, Upload, message} from 'antd';
+import { AiOutlineCamera } from "react-icons/ai"; 
 
 
 const {TextArea}=Input;

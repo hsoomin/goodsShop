@@ -1,14 +1,11 @@
 import React, { useState } from 'react';
-import PropTypes from 'prop-types';
 import './Tab.scss';
 
 const Tab = ({ tabs, tabData }) => {
     const [activeTab, setActiveTab] = useState(tabs[0].value);
-
     const handleTabClick = (tab) => {
         setActiveTab(tab);
     };
-
     const filteredProducts = tabData.filter(
         (product) => product.category === activeTab
     );
@@ -18,9 +15,9 @@ const Tab = ({ tabs, tabData }) => {
             <div className="tab-menu">
                 {tabs.map((tab) => (
                     <button
-                        key={tab.value}
-                        onClick={() => handleTabClick(tab.value)}
-                        className={activeTab === tab.value ? 'active' : ''}
+                    key={tab.value}
+                    onClick={() => handleTabClick(tab.value)}
+                    className={activeTab === tab.value ? 'active' : ''}
                     >
                         {tab.label}
                     </button>
@@ -39,16 +36,6 @@ const Tab = ({ tabs, tabData }) => {
             </div>
         </div>
     );
-};
-
-Tab.propTypes = {
-    tabs: PropTypes.arrayOf(
-        PropTypes.shape({
-            label: PropTypes.string.isRequired,
-            value: PropTypes.string.isRequired,
-        })
-    ).isRequired,
-    tabData: PropTypes.array.isRequired,
 };
 
 export default Tab;

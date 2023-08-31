@@ -2,8 +2,8 @@ import React from 'react';
 import Slide from '../components/Slide';
 import Tab from '../components/Tab';
 import List from '../components/List'; 
-import ProductData from '../data/ProductData.json';
 import SlideData from '../data/Slide.json';
+import ProductData from '../data/ProductData.json';
 
 
 const Interior = () => {
@@ -17,13 +17,12 @@ const Interior = () => {
         { label: 'New arrivals', value: 'new_interior' },
         { label: 'Weekly best', value: 'weekly_interior' },
     ];
-    const interiorList = ProductData.filter(product => product.sort === "interior");
     
     return (
         <div>
             <Slide slideData={interiorSlides} />
             <Tab tabs={tabLabels} tabData={interiorProducts} />
-            <List products={interiorList} />
+            <List products={interiorProducts} />
         </div>
     );
 };

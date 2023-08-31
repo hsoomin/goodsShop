@@ -1,7 +1,6 @@
 import React from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay, Pagination, Navigation } from 'swiper/modules';
-import PropTypes from 'prop-types';
 import "./Slide.scss";
 
 const Slide = ({ slideData }) => {
@@ -39,11 +38,6 @@ const Slide = ({ slideData }) => {
             </Swiper>
         </div>
     );
-};
-
-// Define PropTypes for slideData prop
-Slide.propTypes = {
-    slideData: PropTypes.array.isRequired,
 };
 
 export default Slide;

@@ -8,7 +8,6 @@ const Mdpick = () => {
         Aos.init({ });
     },[]);
 
-
     return (
         <div 
         className='mdpick'  

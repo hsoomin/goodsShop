@@ -1,9 +1,8 @@
 import React, { useState, useEffect } from 'react';
+import { Link, useNavigate } from "react-router-dom";
 import { AiOutlineHeart, AiOutlineArrowRight} from "react-icons/ai"; 
 import axios from 'axios';
 import {API_URL} from '../config/constants';
-import { useNavigate } from "react-router-dom";
-import { Link } from "react-router-dom";
 import Aos from "aos";
 
 const Page = () => {
@@ -27,7 +26,6 @@ const Page = () => {
     useEffect(()=> {
         Aos.init({ });
     },[]);
-
 
     return (
         <div 
