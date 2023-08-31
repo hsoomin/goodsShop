@@ -17,12 +17,13 @@ const Kitchen = () => {
         { label: 'New arrivals', value: 'new_kitchen' },
         { label: 'Weekly best', value: 'weekly_kitchen' },
     ];
+    const kitchenList = ProductData.filter(product => product.sort === "kitchen");
 
     return (
         <div>
             <Slide slideData={kitchenSlides} />
             <Tab tabs={tabLabels} tabData={kitchenProducts} />
-            <List products={kitchenProducts} />
+            <List products={kitchenList} />
         </div>
     );
 };

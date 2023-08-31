@@ -18,12 +18,13 @@ const Fabric = () => {
         { label: 'New arrivals', value: 'new_fabric' },
         { label: 'Weekly best', value: 'weekly_fabric' },
     ];
-    
+    const fabricList = ProductData.filter(product => product.sort === "fabric");
+
     return (
         <div>
             <Slide slideData={fabricSlides} />
             <Tab tabs={tabLabels} tabData={fabricProducts} />
-            <List products={fabricProducts} />
+            <List products={fabricList} />
         </div>
     );
 };
