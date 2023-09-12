@@ -115,25 +115,25 @@
 }
 
 @include mq('large-screen'){
-    .Fabric{
-        .fabric-list{
+    .List{
+        .product-list{
             gap: 0;
         }
     }
 }
 
 @include mq('middle-screen'){
-    .Fabric{
+    .List{
         margin: 50px 0;
         padding: 0 8rem;
     }
 }
 
 @include mq('small-screen'){
-    .Fabric{
+    .List{
         padding: 0 3rem;
-        .fabric-header{
-            .category{
+        .product-header{
+            .product-category{
                 flex-direction: column;
                 text-align: right;
                 font-size: 14px;
@@ -144,8 +144,8 @@
                 }
             }
         }
-        .fabric-list{
-            .fabric-card{
+        .product-list{
+            .product-card{
                 width: 48%;
             }    
         }
@@ -153,10 +153,10 @@
 }
 
 @include mq('xsmall-screen'){
-    .Fabric{
+    .List{
         padding: 0 2rem;
-        .fabric-list{
-            .fabric-card{
+        .product-list{
+            .product-card{
                 width: 100%;
             }    
         }
