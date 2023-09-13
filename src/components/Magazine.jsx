@@ -14,11 +14,11 @@ const Magazine = () => {
         data-aos="fade-up"
         data-aos-anchor-placement="top-bottom"
         data-aos-duration="1000"
-        data-aos-delay="500"
+        data-aos-delay="1000"
         >
             <div className="container">
                 <div className='magazine-title'>
-                    <h2>Magazine</h2>
+                    <h2>MAGAZINE</h2>
                 </div>
                 <div className="magazineList" data-aos="fade-right">
                     <div className="magazine-box">
@@ -35,23 +35,20 @@ const Magazine = () => {
                     data-aos="fade-left"
                     className='swiper-wrap'
                     spaceBetween={20}
-                    slidesPerView={3}
+                    slidesPerView={4}
                     autoplay={{
                         delay: 2500,
                         disableOnInteraction: false,
                     }}
                     loop={true}
-                    breakpoints={{
-                        768: {
-                        slidesPerView: 3,
-                        },
-                    }}
                     modules={[Autoplay]}
                     >
+                        <SwiperSlide className='mag-img'><img src={process.env.PUBLIC_URL + '/img/mag1.jpg'} alt="" /></SwiperSlide>
                         <SwiperSlide className='mag-img'><img src={process.env.PUBLIC_URL + '/img/mag2.jpg'} alt="" /></SwiperSlide>
-                        <SwiperSlide className='mag-img'><img src={process.env.PUBLIC_URL + '/img/mag5.jpg'} alt="" /></SwiperSlide>
                         <SwiperSlide className='mag-img'><img src={process.env.PUBLIC_URL + '/img/mag3.jpg'} alt="" /></SwiperSlide>
                         <SwiperSlide className='mag-img'><img src={process.env.PUBLIC_URL + '/img/mag4.jpg'} alt="" /></SwiperSlide>
+                        <SwiperSlide className='mag-img'><img src={process.env.PUBLIC_URL + '/img/mag5.jpg'} alt="" /></SwiperSlide>
+                        <SwiperSlide className='mag-img'><img src={process.env.PUBLIC_URL + '/img/mag6.jpg'} alt="" /></SwiperSlide>
                     </Swiper>
                 </div>
             </div>

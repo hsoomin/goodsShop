@@ -22,7 +22,7 @@ const QuickButton = () => {
         <div 
         className="QuickButton"
         onClick={scrollToTop}
-        style={{position:'fixed', right: '24px', bottom: '14%', zIndex:101}}>
+        style={{position:'fixed', right: '20px', bottom: '14%', zIndex:101}}>
             <button 
             className="quick_top" 
             type="button"
