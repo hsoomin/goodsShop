@@ -118,7 +118,7 @@ a{text-decoration: none; color: #333;}
                         li{
                             padding-bottom: 10px;
                             a{
-                                font-size: 20px;
+                                font-size: 18px;
                             }
                         }
                     }
@@ -284,7 +284,7 @@ a{text-decoration: none; color: #333;}
             border-bottom: 1px solid mediumseagreen;
             position: absolute;
             top: 15px;
-            right: 35px;
+            right: 20px;
             z-index: 9;
             padding-bottom: 5px;
             span{
@@ -415,7 +415,6 @@ a{text-decoration: none; color: #333;}
                     }
                     .swiper-wrap{
                         width:100%;
-                        
                         position: absolute;
                         left:320px; 
                         display: flex;
@@ -515,7 +514,6 @@ a{text-decoration: none; color: #333;}
                 }
             }
         }
-
         .mdtab{
             .mdList{
                 ul{
@@ -527,6 +525,20 @@ a{text-decoration: none; color: #333;}
                     }
                 }
             }
+        }
+        .p-list{
+            flex-direction: column;
+            gap: 1rem;
+            .product-card{
+                .product-link{
+                    .product-contents{
+                        .product-name{
+                            font-size: 18px;
+                            height: 40px;
+                        }
+                    }
+                }
+            }    
         }
 
         .foot-memu{
@@ -558,5 +570,4 @@ a{text-decoration: none; color: #333;}
 
     }
 }
-
 
